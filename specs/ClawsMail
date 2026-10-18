@@ -1,0 +1,34 @@
+# Spec for tools/riscpkg.py: ClawsMail.
+Package: ClawsMail
+Section: Mail
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Components: Apps.Network.!ClawsMail (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: Claws Mail email client (GTK 3)
+ An email client with POP3, IMAP and SMTP, all with TLS through
+ AcornSSL (RISC OS 5.28 or later), and local MH folders. HTML mail is
+ laid out, and links open in your browser. Starts on the icon bar.
+ .
+ This is a public beta of the riscos-gtk ports.
+Build-Map: !ClawsMail -> Apps/Network/!ClawsMail
+Build-Notice: Claws Mail, packaged for PackMan from the riscos-gtk release zip on
+ https://github.com/adyoull/riscos-gtk/releases
+ .
+ Claws Mail is Claws Mail 4.4.0 (www.claws-mail.org), under the GNU GPL version 3 or later. It is linked with GTK 3 and its
+ libraries (LGPL) and includes DejaVu fonts and PThreadTicker. The
+ source is offered by the Source file in the application and on the
+ release page. Licences follow.
+Build-Copyright: !ClawsMail/Licence
+Build-Copyright: !ClawsMail/LicenceEtPan
+Build-Copyright: !ClawsMail/LicenceGumbo
+Build-Copyright: !ClawsMail/LicenceLiteHTML
+Build-Copyright: !ClawsMail/LicenceLGPL
+Build-Copyright: !ClawsMail/PThreadTicker-Licence
+Build-Copyright: !ClawsMail/fonts/Licence
+Build-Copyright: !ClawsMail/share/mime/Licence
+Build-Copyright: !ClawsMail/Source

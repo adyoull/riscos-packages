@@ -1,0 +1,31 @@
+# Spec for tools/riscpkg.py: Geany.
+Package: Geany
+Section: Development
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Components: Apps.Development.!Geany (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: Geany programmer's editor (GTK 3)
+ A fast programmer's editor: syntax highlighting for dozens of
+ languages, a symbol list and tabs. Build commands run in a TaskWindow
+ with errors listed in the Compiler tab (DDE throwback supported).
+ .
+ This is a public beta of the riscos-gtk ports.
+Build-Map: !Geany -> Apps/Development/!Geany
+Build-Notice: Geany, packaged for PackMan from the riscos-gtk release zip on
+ https://github.com/adyoull/riscos-gtk/releases
+ .
+ Geany is Geany 2.1 (www.geany.org), under the GNU GPL version 2. It is linked with GTK 3 and its
+ libraries (LGPL) and includes DejaVu fonts and PThreadTicker. The
+ source is offered by the Source file in the application and on the
+ release page. Licences follow.
+Build-Copyright: !Geany/Licence
+Build-Copyright: !Geany/LicenceLGPL
+Build-Copyright: !Geany/PThreadTicker-Licence
+Build-Copyright: !Geany/fonts/Licence
+Build-Copyright: !Geany/share/mime/Licence
+Build-Copyright: !Geany/Source

@@ -1,0 +1,21 @@
+# Spec for tools/riscpkg.py: AddrSpace.
+Package: AddrSpace
+Section: System
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Utilities.!AddrSpace (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-addrspace
+Description: Shows what is using RISC OS's logical address space
+ Lists every dynamic area with its owner, size and reserved space,
+ highlights changes, measures the free space, and finds the cause of
+ "Unable to allocate logical address space".
+Build-Map: !AddrSpace -> Apps/Utilities/!AddrSpace
+Build-Notice: AddrSpace, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-addrspace/releases
+ .
+ AddrSpace is under the GNU GPL version 2 or later, which follows.
+Build-Copyright: !AddrSpace/docs/Licences

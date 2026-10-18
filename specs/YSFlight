@@ -1,0 +1,24 @@
+# Spec for tools/riscpkg.py: YSFlight.
+Package: YSFlight
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!YSFlight (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-ysflight
+Description: Free flight simulator (YSFlight Community Edition)
+ Fly YSFlight's aircraft in a desktop window or full screen with
+ software OpenGL, sound and USB joysticks. About 22 frames a second
+ at 640x480 on a Pi 4. ARMv7 with VFP.
+Build-Map: !YSFlight -> Apps/Games/!YSFlight
+Build-Untyped: auto
+Build-Notice: YSFlight Community Edition, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-ysflight/releases
+ .
+ YSFlight Community Edition (github.com/YSCEDC/YSCE) is under the BSD
+ 3-clause licence, which follows.
+Build-Copyright: !YSFlight/Licence
+Build-Copyright: !YSFlight/PThreadTicker-Licence

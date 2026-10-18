@@ -1,0 +1,26 @@
+# Spec for tools/riscpkg.py: OpenTTD.
+Package: OpenTTD
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Suggests: OpenTTD-OpenSFX, OpenTTD-OpenMSX
+Components: Apps.Games.!OpenTTD (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-openttd
+Description: Open-source transport simulation game (OpenTTD 14.1)
+ Build road, rail, sea and air networks, with the free OpenGFX
+ graphics. Sound effects (OpenTTD-OpenSFX) and music (OpenTTD-OpenMSX)
+ are separate packages. ARMv7 with VFP; about 128 MB free.
+Build-Map: !OpenTTD -> Apps/Games/!OpenTTD
+Build-Untyped: auto
+Build-Notice: OpenTTD, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-openttd/releases
+ .
+ OpenTTD 14.1 (www.openttd.org) is under the GNU GPL version 2;
+ OpenGFX keeps its own licence. Licences follow.
+Build-Copyright: !OpenTTD/docs/COPYING
+Build-Copyright: !OpenTTD/docs/OpenGFX-copyright
+Build-Copyright: !OpenTTD/docs/PThreadTicker-Licence

@@ -26,8 +26,12 @@ without Version) plus build fields starting "Build-":
 
   Build-Map: <path in release zip> -> <path in package zip> (one or more;
              zip paths with '/', e.g. !Folio -> Apps/Document/!Folio)
-  Build-Copyright: <file in release zip>                  (one or more)
+  Build-Copyright: <file or directory in release zip>     (one or more)
   Build-Notice: text put at the top of RiscPkg/Copyright (continued lines)
+  Build-Untyped: ffd                                      (optional)
+      gives files the release zip left without a RISC OS filetype that
+      type (UnixLib ports read their data files whatever their type);
+      without it such a file stops the build
 
 Only what the maps cover goes into the package; anything else in the
 release zip (a loose ReadMe for people unzipping by hand, say) is left out
@@ -58,6 +62,8 @@ ORDER = ["Package", "Version", "Section", "Priority", "Licence", "Maintainer",
          "Recommends", "Suggests", "Conflicts", "Components", "Homepage",
          "Description"]
 INDEX_EXTRA = ["Size", "MD5Sum", "URL"]
+MAX_FILE = 100 * 1000 * 1000        # GitHub's limit for one file
+SITE_WARN = 900 * 1000 * 1000       # Pages sites should stay under 1 GB
 
 
 class Fail(Exception):
@@ -226,6 +232,35 @@ def arc0_extra(filetype, when, attr=0x33):
     return (0x4341).to_bytes(2, "little") + len(body).to_bytes(2, "little") + body
 
 
+# Filetypes for "Build-Untyped: auto", by the name's extension. Only types
+# RISC OS's MimeMap gives the same extension, so a UnixLib program that
+# uses ",xyz" filetype suffixes still sees the plain name; anything else
+# gets the default, normally Text, which UnixLib never adds a suffix for.
+EXT_TYPES = {}
+for _t, _exts in ((0xFFF, "txt md xml cfg conf ini def lst json html htm css c h cc "
+                          "cpp cxx hpp hh s S asm sh mk mak py pl lua csv srt ass "
+                          "log diff patch po glsl vert frag ac in am m4 cmake rst "
+                          "tex yml yaml toml"),
+                  (0xB60, "png"), (0xC85, "jpg jpeg"), (0x695, "gif"),
+                  (0xFD4, "mid midi"), (0xFB1, "wav")):
+    for _e in _exts.split():
+        EXT_TYPES[_e.lower()] = _t
+TEXT_NAMES = {"makefile", "readme", "copying", "licence", "license", "authors",
+              "changelog", "news", "install", "todo", "version"}
+
+
+def type_for(name, untyped):
+    kind, default = untyped
+    if kind == "fixed":
+        return default
+    leaf = name.rsplit("/", 1)[-1]
+    if "." in leaf:
+        return EXT_TYPES.get(leaf.rsplit(".", 1)[1].lower(), default)
+    if leaf.lower() in TEXT_NAMES or leaf.lower().startswith(("readme", "copying", "licen")):
+        return 0xFFF
+    return default
+
+
 # --------------------------------------------------------------- the spec
 
 def read_spec(path):
@@ -246,11 +281,22 @@ def read_spec(path):
     if not maps:
         raise Fail("%s: no Build-Map" % path)
     copyright_files = [c.strip() for c in get_all(rec, "Build-Copyright")]
+    untyped = get(rec, "Build-Untyped")
+    if untyped is not None:
+        words = untyped.split()
+        try:
+            if words[0] == "auto":
+                untyped = ("auto", int(words[1], 16) if len(words) > 1 else 0xFFF)
+            else:
+                untyped = ("fixed", int(words[0], 16))
+        except (ValueError, IndexError):
+            raise Fail("%s: Build-Untyped wants a filetype in hex (e.g. ffd), "
+                       "or 'auto' and an optional default type" % path)
     notice = get(rec, "Build-Notice", "")
     notice = "\n".join(l[1:] if l.startswith(" ") else l
                        for l in notice.split("\n"))
     notice = "\n".join("" if l == "." else l for l in notice.split("\n"))
-    return control, maps, copyright_files, notice.strip("\n")
+    return control, maps, copyright_files, notice.strip("\n"), untyped
 
 
 # ------------------------------------------------------------ checks
@@ -380,7 +426,8 @@ class _Key:
 
 
 def build(args):
-    control, maps, copyright_files, notice = read_spec(args.spec)
+    control, maps, copyright_files, notice, untyped = read_spec(args.spec)
+    typed_here = 0
     name = get(control, "Package")
     with zipfile.ZipFile(args.source) as src:
         infos = src.infolist()
@@ -407,9 +454,17 @@ def build(args):
         # RiscPkg/Copyright: the notice, then each licence file.
         parts = [notice] if notice else []
         names = src.namelist()
+        expanded = []
         for c in copyright_files:
-            if c not in names:
+            if c in names:
+                expanded.append(c)
+                continue
+            under = sorted(n for n in names
+                           if n.startswith(c.rstrip("/") + "/") and not n.endswith("/"))
+            if not under:
                 raise Fail("Build-Copyright %s isn't in %s" % (c, args.source))
+            expanded += under
+        for c in expanded:
             parts.append(("-" * 72) + "\n" + c.rsplit("/", 1)[-1] + "\n" +
                          ("-" * 72) + "\n" +
                          src.read(c).decode("latin-1").rstrip("\n"))
@@ -442,6 +497,14 @@ def build(args):
                     zi.create_system = info.create_system
                     zi.external_attr = info.external_attr
                     zi.extra = info.extra
+                    if not info.is_dir() and arc0_type(info) is None:
+                        if untyped is None:
+                            raise Fail("%s has no RISC OS filetype; give the spec a "
+                                       "Build-Untyped: <type> line to set one"
+                                       % info.filename)
+                        zi.extra = info.extra + arc0_extra(
+                            type_for(info.filename, untyped),
+                            time.mktime(info.date_time + (0, 0, -1)))
                     if info.is_dir():
                         zi.compress_type = zipfile.ZIP_STORED
                         z.writestr(zi, b"")
@@ -541,11 +604,21 @@ def index(args):
     os.makedirs(pkgdir, exist_ok=True)
     os.makedirs(os.path.join(site, "pkg"), exist_ok=True)
     keep, records, rows, pointer = set(), [], [], []
+    total = 0
+    owner = {}
     for name in sorted(pool, key=str.lower):
         version, path = pool[name][-1]
         rec, errs, warns = check_zip(path)
         if errs:
             raise Fail("\n".join(errs))
+        with zipfile.ZipFile(path) as z:
+            for n in z.namelist():
+                if n.endswith("/") or n.startswith("RiscPkg/"):
+                    continue
+                if n in owner:
+                    raise Fail("%s is in both %s and %s; PackMan would refuse "
+                               "to install the second" % (n, owner[n], name))
+                owner[n] = name
         leaf = os.path.basename(path)
         keep.add(leaf)
         dst = os.path.join(pkgdir, leaf)
@@ -553,6 +626,10 @@ def index(args):
                 and _md5(dst) == _md5(path)):
             shutil.copyfile(path, dst)
         size = os.path.getsize(path)
+        if size > MAX_FILE:
+            raise Fail("%s is %.1f MB; GitHub Pages won't serve a file over "
+                       "100 MB" % (leaf, size / 1e6))
+        total += size
         fields = list(rec) + [("Size", str(size)), ("MD5Sum", _md5(path)),
                               ("URL", base + "packages/" + leaf)]
         records.append(format_record(fields))
@@ -570,7 +647,11 @@ def index(args):
     _write(os.path.join(site, ".nojekyll"), "")
     _write(os.path.join(site, "index.html"),
            HTML.format(index_url=esc(base + "pkg/index"), rows="\n".join(rows)))
-    print("index: %d package(s); PackMan source %spkg/index" % (len(records), base))
+    print("index: %d package(s), %.0f MB; PackMan source %spkg/index"
+          % (len(records), total / 1e6, base))
+    if total > SITE_WARN:
+        print("warning: the site is %.0f MB; GitHub Pages sites should stay "
+              "under 1 GB" % (total / 1e6))
 
 
 def _md5(p):

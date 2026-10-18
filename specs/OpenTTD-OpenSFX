@@ -1,0 +1,21 @@
+# Spec for tools/riscpkg.py: OpenTTD-OpenSFX.
+Package: OpenTTD-OpenSFX
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: OpenTTD
+Homepage: https://github.com/adyoull/riscos-openttd
+Description: Sound effects for OpenTTD (OpenSFX)
+ The free OpenSFX sound set for OpenTTD. It goes into OpenTTD's
+ baseset directory.
+Build-Map: !OpenTTD/baseset/opensfx -> Apps/Games/!OpenTTD/baseset/opensfx
+Build-Untyped: auto
+Build-Notice: OpenSFX for OpenTTD, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-openttd/releases
+ .
+ OpenSFX is under the Creative Commons Sampling Plus 1.0 licence, which
+ follows.
+Build-Copyright: !OpenTTD/baseset/opensfx/license.txt

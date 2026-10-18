@@ -1,0 +1,20 @@
+# Spec for tools/riscpkg.py: NetStats.
+Package: NetStats
+Section: Network
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Components: Apps.Network.!NetStats (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-netstats
+Description: Network statistics: traffic graphs, connections and LAN devices
+ Per-interface send and receive rates with a live graph, TCP, UDP and
+ IP counters, open connections, routes and DNS, and a scan of the
+ devices on the network with their names and makers.
+Build-Map: !NetStats -> Apps/Network/!NetStats
+Build-Notice: NetStats, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-netstats/releases
+ .
+ NetStats is under the MIT licence, given in its !Help, which follows.
+Build-Copyright: !NetStats/!Help

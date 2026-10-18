@@ -1,0 +1,26 @@
+# Spec for tools/riscpkg.py: Reel.
+Package: Reel
+Section: Video
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Video.!Reel (Movable LookAt), Apps.Video.!ReelEGL (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-ffmpeg
+Description: Video player for the RISC OS desktop, built on FFmpeg
+ Plays MP4, MKV, WebM, AVI and more (H.264, HEVC, VP9, AV1), with
+ subtitles, chapters, playlists and a mini player, and web streams.
+ Uses VideoOverlay and the Pi's hardware decoders where it can.
+ !ReelEGL is the same player drawing through riscos-mesa's EGL.
+ Needs ARMv7 with NEON.
+Build-Map: !Reel -> Apps/Video/!Reel
+Build-Map: !ReelEGL -> Apps/Video/!ReelEGL
+Build-Notice: Reel, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-ffmpeg/releases
+ .
+ Reel is under the GNU GPL version 2 or later and includes FFmpeg 5.1.10
+ and other libraries, which keep their own licences. Licences follow.
+Build-Copyright: !Reel/docs/Licences
+Build-Copyright: !ReelEGL/docs/Licences/riscos-mesa

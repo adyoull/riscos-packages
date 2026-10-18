@@ -1,0 +1,25 @@
+# Spec for tools/riscpkg.py: RDPServer.
+Package: RDPServer
+Section: Network
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, CryptRandom (>= 0.12)
+Components: Apps.Network.!RDPServer (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-rdpserver
+Description: Remote Desktop (RDP) server for the RISC OS desktop
+ Use this desktop from Windows Remote Desktop, Microsoft's Windows App,
+ FreeRDP or !RDPClient, with TLS 1.2, sound and logins. The server
+ runs as a module, so it keeps serving when the desktop isn't
+ multitasking.
+ .
+ This is a release candidate.
+Build-Map: !RDPServer -> Apps/Network/!RDPServer
+Build-Notice: RDPServer, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-rdpserver/releases
+ .
+ RDPServer is under the MIT licence and includes libxrdp and Mbed TLS
+ (Apache 2.0) and font8x8 (public domain). Licences follow.
+Build-Copyright: !RDPServer/Licences

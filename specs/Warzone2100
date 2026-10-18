@@ -1,0 +1,27 @@
+# Spec for tools/riscpkg.py: Warzone2100.
+Package: Warzone2100
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!Warzone2100 (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-warzone2100
+Description: Real-time strategy game (Warzone 2100 2.3.9)
+ 3D real-time strategy with software OpenGL, in a multitasking window
+ or full screen, with hardware overlay on the Pi. Campaign, skirmish
+ and the original music. ARMv7 with VFPv3.
+Build-Map: !Warzone2100 -> Apps/Games/!Warzone2100
+Build-Notice: Warzone 2100, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-warzone2100/releases
+ .
+ Warzone 2100 2.3.9 (wz2100.net) is under the GNU GPL version 2 or
+ later; its data and libraries keep their own licences. Licences follow.
+Build-Copyright: !Warzone2100/docs/COPYING
+Build-Copyright: !Warzone2100/docs/COPYING-NONGPL
+Build-Copyright: !Warzone2100/docs/COPYING-README
+Build-Copyright: !Warzone2100/docs/DejaVu-LICENSE
+Build-Copyright: !Warzone2100/docs/riscos-mesa-LICENCES
+Build-Copyright: !Warzone2100/docs/licences

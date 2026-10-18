@@ -11,12 +11,33 @@ In PackMan, choose **Sources…** from the icon bar menu, add
 and choose **Update lists**. The packages then show in PackMan alongside
 the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 
-| Package | What it is |
-|---|---|
-| Folio | Reader for PDF and ebook files, built on MuPDF |
-| FolioSpeech | Reading aloud for Folio (British English voice) |
-| FolioOCR | Text recognition for scanned pages in Folio |
-| FolioCJK | Chinese, Japanese and Korean font for Folio |
+| Package | Version | What it is |
+|---|---|---|
+| AddrSpace | 0.1.0.0.1-1 | Shows what is using RISC OS's logical address space |
+| ClawsMail | 4.4.0.0.16-1 | Claws Mail email client (GTK 3) |
+| FFmpeg | 5.1.10.0.22-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
+| fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
+| Folio | 0.0.1.0.48-1 | Reader for PDF and ebook files, built on MuPDF |
+| FolioCJK | 0.0.1.0.48-1 | Chinese, Japanese and Korean font for Folio |
+| FolioOCR | 0.0.1.0.48-1 | Text recognition (OCR) for Folio, English |
+| FolioSpeech | 0.0.1.0.48-1 | Reading aloud for Folio (British English voice) |
+| Freeciv | 3.2.6.0.14-1 | Civilization-style turn-based strategy game (Freeciv 3.2.6) |
+| Geany | 2.1.0.5-1 | Geany programmer's editor (GTK 3) |
+| Gnumeric | 1.12.57.0.7-1 | Gnumeric spreadsheet (GTK 3) |
+| L3afpad | 0.8.18.1.11.0.26-1 | L3afpad simple text editor (GTK 3) |
+| Matinee | 0.1.1.0.1-1 | Plex, Jellyfin and DLNA media client with a built-in player |
+| mtPaint | 3.50.14.0.5-1 | mtPaint painting program (GTK 3) |
+| NetStats | 1.06.0.1-1 | Network statistics: traffic graphs, connections and LAN devices |
+| OpenTTD | 14.1.0.7-1 | Open-source transport simulation game (OpenTTD 14.1) |
+| OpenTTD-OpenMSX | 14.1.0.7-1 | Music for OpenTTD (OpenMSX) |
+| OpenTTD-OpenSFX | 14.1.0.7-1 | Sound effects for OpenTTD (OpenSFX) |
+| PThreadTicker | 0.03.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
+| RDPServer | 0.2~rc3.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
+| Reel | 0.1.27.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
+| SoftMIDI | 0.5.0.0.1-1 | General MIDI SoundFont and the *MIDIPlay player |
+| TORCS | 1.3.7.0.3-1 | The Open Racing Car Simulator, a 3D racing game |
+| Warzone2100 | 2.3.9.0.13-1 | Real-time strategy game (Warzone 2100 2.3.9) |
+| YSFlight | 0.0.1-1 | Free flight simulator (YSFlight Community Edition) |
 
 ## Version numbers
 
@@ -60,7 +81,10 @@ filetypes in the zip. `tools/riscpkg.py` repackages them:
   package zips stay in `pool/` on the build machine, not in the
   repository.
 
-`package-folio.sh N` packages Folio's release 0.0.1-testN and its plugins.
+`releases` (kept on the build machine, not in git) lists the release zip
+each package is made from (package, upstream version, build, zip); `./package.sh` packages them all, or
+`./package.sh Reel Geany` just those. `package-folio.sh N` packages
+Folio's release 0.0.1-testN and its plugins.
 
 The tools are MIT licensed; each package carries its own licence in
 RiscPkg/Copyright.

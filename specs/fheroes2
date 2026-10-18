@@ -1,0 +1,25 @@
+# Spec for tools/riscpkg.py: fheroes2.
+Package: fheroes2
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!fheroes2 (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-fheroes2
+Description: Free re-creation of the Heroes of Might and Magic II engine
+ Turn-based fantasy strategy in a desktop window or full screen, with
+ music through a built-in MIDI synth (or Ogg, MP3 or FLAC tracks).
+ It needs the data from the original game (GOG or CD) or the free
+ demo, which you add yourself. ARMv7 (Pi 2 or later).
+Build-Map: !fheroes2 -> Apps/Games/!fheroes2
+Build-Notice: fheroes2, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-fheroes2/releases
+ .
+ fheroes2 1.1.17 (github.com/ihhub/fheroes2) is under the GNU GPL
+ version 2 or later; the libraries it includes keep their own licences.
+ None of the original game is included. Licences follow.
+Build-Copyright: !fheroes2/docs/COPYING
+Build-Copyright: !fheroes2/docs/licences

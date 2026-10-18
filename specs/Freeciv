@@ -1,0 +1,27 @@
+# Spec for tools/riscpkg.py: Freeciv.
+Package: Freeciv
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!Freeciv (Movable LookAt), Apps.Games.!CivServer (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-freeciv
+Description: Civilization-style turn-based strategy game (Freeciv 3.2.6)
+ The SDL2 client and the server: play the computer on the desktop in a
+ window or full window, or join a network game. About 80 MB free
+ memory needed.
+ .
+ This is a test build.
+Build-Map: !Freeciv -> Apps/Games/!Freeciv
+Build-Map: !CivServer -> Apps/Games/!CivServer
+Build-Notice: Freeciv, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-freeciv/releases
+ .
+ Freeciv 3.2.6 (www.freeciv.org) is under the GNU GPL version 2 or
+ later; its libraries and data keep their own licences. Licences follow.
+Build-Copyright: !Freeciv/docs/COPYING
+Build-Copyright: !Freeciv/docs/licences
+Build-Copyright: !Freeciv/data/themes/gui-sdl2/human/COPYING.DejaVu

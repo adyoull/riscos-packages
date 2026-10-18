@@ -1,0 +1,30 @@
+# Spec for tools/riscpkg.py: L3afpad.
+Package: L3afpad
+Section: Text
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Components: Apps.Document.!L3afpad (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: L3afpad simple text editor (GTK 3)
+ A lightweight text editor with a window per document, printing
+ through !Printers, RISC OS Save and Open boxes and a Choices window.
+ .
+ This is a public beta of the riscos-gtk ports.
+Build-Map: !L3afpad -> Apps/Document/!L3afpad
+Build-Notice: L3afpad, packaged for PackMan from the riscos-gtk release zip on
+ https://github.com/adyoull/riscos-gtk/releases
+ .
+ L3afpad is L3afpad 0.8.18.1.11 (github.com/stevenhoneyman/l3afpad), under the GNU GPL version 2 or later. It is linked with GTK 3 and its
+ libraries (LGPL) and includes DejaVu fonts and PThreadTicker. The
+ source is offered by the Source file in the application and on the
+ release page. Licences follow.
+Build-Copyright: !L3afpad/Licence
+Build-Copyright: !L3afpad/LicenceLGPL
+Build-Copyright: !L3afpad/PThreadTicker-Licence
+Build-Copyright: !L3afpad/fonts/Licence
+Build-Copyright: !L3afpad/share/mime/Licence
+Build-Copyright: !L3afpad/Source

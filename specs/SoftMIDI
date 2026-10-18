@@ -1,0 +1,22 @@
+# Spec for tools/riscpkg.py: SoftMIDI.
+Package: SoftMIDI
+Section: Audio
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Homepage: https://github.com/adyoull/riscos-softmidi
+Description: General MIDI SoundFont and the *MIDIPlay player
+ A General MIDI SoundFont (TimGM6mb) shared by programs built with the
+ midisynth library, and *MIDIPlay to play .mid files through
+ SharedSoundBuffer or DigitalRenderer. It goes into !Boot.Resources.
+Build-Map: !SoftMIDI -> Resources/!SoftMIDI
+Build-Notice: SoftMIDI, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-softmidi/releases
+ .
+ SoftMIDI's player and library are under the MIT licence (see !Help);
+ the TimGM6mb SoundFont is under the GNU GPL version 2, which follows.
+Build-Copyright: !SoftMIDI/!Help
+Build-Copyright: !SoftMIDI/SFLicence

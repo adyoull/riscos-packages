@@ -1,0 +1,26 @@
+# Spec for tools/riscpkg.py: OpenTTD-OpenMSX.
+Package: OpenTTD-OpenMSX
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: OpenTTD
+Homepage: https://github.com/adyoull/riscos-openttd
+Description: Music for OpenTTD (OpenMSX)
+ The free OpenMSX music set for OpenTTD, with the SoundFont OpenTTD
+ plays it through. It goes into OpenTTD's application directory.
+Build-Map: !OpenTTD/baseset/openmsx -> Apps/Games/!OpenTTD/baseset/openmsx
+Build-Map: !OpenTTD/SoundFont -> Apps/Games/!OpenTTD/SoundFont
+Build-Map: !OpenTTD/docs/SoundFont-licence -> Apps/Games/!OpenTTD/docs/SoundFont-licence
+Build-Map: !OpenTTD/docs/OpenMSX-copyright -> Apps/Games/!OpenTTD/docs/OpenMSX-copyright
+Build-Untyped: auto
+Build-Notice: OpenMSX for OpenTTD, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-openttd/releases
+ .
+ OpenMSX is under the GNU GPL version 2; the SoundFont keeps its own
+ licence. Licences follow.
+Build-Copyright: !OpenTTD/baseset/openmsx/license.txt
+Build-Copyright: !OpenTTD/docs/OpenMSX-copyright
+Build-Copyright: !OpenTTD/docs/SoundFont-licence

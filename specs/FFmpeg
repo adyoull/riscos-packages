@@ -1,0 +1,26 @@
+# Spec for tools/riscpkg.py: FFmpeg.
+Package: FFmpeg
+Section: Video
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Video.!FFmpeg (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-ffmpeg
+Description: FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON
+ FFmpeg 5.1.10 with its NEON code, made safe for RISC OS's alignment
+ checks: ffmpeg, ffprobe and ffplay, and an icon bar front end (drop a
+ file on it to play or convert it). H.264 and HEVC hardware decoding
+ on the Pi through ReelHWAccel. Needs ARMv7 with NEON.
+Build-Map: !FFmpeg -> Apps/Video/!FFmpeg
+Build-Untyped: auto fff
+Build-Notice: FFmpeg, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-ffmpeg/releases
+ .
+ FFmpeg 5.1.10 (ffmpeg.org) is built under the GNU GPL version 2 or
+ later (it includes x264); the other libraries keep their own licences.
+ The source is in the application's docs.source and on the release
+ page. Licences follow.
+Build-Copyright: !FFmpeg/docs/Licences

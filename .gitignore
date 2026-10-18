@@ -2,3 +2,5 @@ pool/
 site/
 __pycache__/
 *.tmp
+.pages/
+releases

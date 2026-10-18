@@ -1,0 +1,31 @@
+# Spec for tools/riscpkg.py: mtPaint.
+Package: mtPaint
+Section: Graphics
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Components: Apps.Graphics.!mtPaint (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: mtPaint painting program (GTK 3)
+ A painting program for pixel art and photos: palettes, layers and
+ animation frames; loads and saves PNG, JPEG, GIF and BMP. RISC OS Save
+ and Open boxes; Adjust paints with the second colour.
+ .
+ This is a public beta of the riscos-gtk ports.
+Build-Map: !mtPaint -> Apps/Graphics/!mtPaint
+Build-Notice: mtPaint, packaged for PackMan from the riscos-gtk release zip on
+ https://github.com/adyoull/riscos-gtk/releases
+ .
+ mtPaint is mtPaint 3.50.14 (mtpaint.sourceforge.net), under the GNU GPL version 3. It is linked with GTK 3 and its
+ libraries (LGPL) and includes DejaVu fonts and PThreadTicker. The
+ source is offered by the Source file in the application and on the
+ release page. Licences follow.
+Build-Copyright: !mtPaint/Licence
+Build-Copyright: !mtPaint/LicenceLGPL
+Build-Copyright: !mtPaint/PThreadTicker-Licence
+Build-Copyright: !mtPaint/fonts/Licence
+Build-Copyright: !mtPaint/share/mime/Licence
+Build-Copyright: !mtPaint/Source

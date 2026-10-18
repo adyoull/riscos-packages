@@ -1,0 +1,32 @@
+# Spec for tools/riscpkg.py: Gnumeric.
+Package: Gnumeric
+Section: Spreadsheet
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Components: Apps.Office.!Gnumeric (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: Gnumeric spreadsheet (GTK 3)
+ The GNOME spreadsheet: hundreds of functions, charts, and Excel
+ (.xls/.xlsx), OpenDocument, Lotus 1-2-3, Quattro Pro, HTML, CSV and
+ text files. RISC OS Save and Open boxes, Wimp menus and an icon bar
+ icon; CSV files open from the Filer.
+ .
+ This is a public beta of the riscos-gtk ports.
+Build-Map: !Gnumeric -> Apps/Office/!Gnumeric
+Build-Notice: Gnumeric, packaged for PackMan from the riscos-gtk release zip on
+ https://github.com/adyoull/riscos-gtk/releases
+ .
+ Gnumeric is Gnumeric 1.12.57 (www.gnumeric.org), under the GNU GPL version 2 or 3. It is linked with GTK 3 and its
+ libraries (LGPL) and includes DejaVu fonts and PThreadTicker. The
+ source is offered by the Source file in the application and on the
+ release page. Licences follow.
+Build-Copyright: !Gnumeric/Licence
+Build-Copyright: !Gnumeric/LicenceLGPL
+Build-Copyright: !Gnumeric/PThreadTicker-Licence
+Build-Copyright: !Gnumeric/fonts/Licence
+Build-Copyright: !Gnumeric/share/mime/Licence
+Build-Copyright: !Gnumeric/Source

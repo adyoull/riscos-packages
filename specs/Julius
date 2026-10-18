@@ -1,0 +1,23 @@
+# Spec for tools/riscpkg.py: Julius.
+Package: Julius
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!Julius (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-julius
+Description: Open-source engine for Caesar III, the Roman city-building game
+ Plays the original Caesar III and its saved games in a desktop window
+ or full screen, with wide-screen support. It needs the files from your
+ own copy of Caesar III (1.0.1.0: GOG, Steam or CD). Pi 4 recommended.
+Build-Map: !Julius -> Apps/Games/!Julius
+Build-Notice: Julius, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-julius/releases
+ .
+ Julius 1.8.0 (github.com/bvschaik/julius) is under the GNU AGPL
+ version 3. None of the original game is included. Licences follow.
+Build-Copyright: !Julius/docs/COPYING
+Build-Copyright: !Julius/docs/PThreadTicker-Licence

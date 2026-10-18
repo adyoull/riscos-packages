@@ -1,0 +1,23 @@
+# Spec for tools/riscpkg.py: Matinee.
+Package: Matinee
+Section: Video
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Video.!Matinee (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-matinee
+Description: Plex, Jellyfin and DLNA media client with a built-in player
+ Browse films and TV on a Plex, Jellyfin or DLNA server and play them
+ in Matinee's own window; the server converts what Matinee can't play.
+ Continue watching, resume points, and hand-off to Reel. Plex is a
+ trademark of Plex, Inc.; Matinee is not affiliated with it.
+Build-Map: !Matinee -> Apps/Video/!Matinee
+Build-Notice: Matinee, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-matinee/releases
+ .
+ Matinee is under the GNU GPL version 2 or later and includes FFmpeg and
+ other libraries, which keep their own licences. Licences follow.
+Build-Copyright: !Matinee/docs/Licences

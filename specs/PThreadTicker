@@ -1,0 +1,20 @@
+# Spec for tools/riscpkg.py: PThreadTicker.
+Package: PThreadTicker
+Section: System
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm
+Homepage: https://github.com/adyoull/riscos-unixlib
+Description: Keeps threaded UnixLib programs safe in the desktop
+ The PThreadTicker module, from riscos-unixlib 5.0.3.3, installed in
+ !System. It runs UnixLib's thread switcher only when it's safe to.
+ Programs that need it load a copy from their own directory if this
+ one isn't there; a newer one in !System wins.
+Build-Map: PThreadTicker/!System -> System
+Build-Notice: PThreadTicker, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-unixlib/releases
+ .
+ PThreadTicker is under the licence that follows.
+Build-Copyright: PThreadTicker/Licence

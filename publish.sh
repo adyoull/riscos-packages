@@ -44,22 +44,39 @@ fi
 git push -q -u origin main
 
 # --- gh-pages: one commit with the current site -----------------------
-TMP=$(mktemp -d)
-trap 'rm -rf "$TMP"' EXIT
-cp -R site/. "$TMP/"
+# .pages/ is a local git repository kept between runs. Each run makes a
+# new commit with no history and force-pushes it, so GitHub only ever
+# holds the current site; because .pages still has the commit GitHub has,
+# git only uploads the zips that changed.
+if [ ! -d .pages/.git ]; then
+	mkdir -p .pages
+	git -C .pages init -q -b gh-pages
+fi
+find .pages -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+cp -R site/. .pages/
 (
-	cd "$TMP"
-	git init -q -b gh-pages
+	cd .pages
+	git checkout -q --orphan next
 	git add -A
 	git commit -q -m "Packages as of $(date -u +%Y-%m-%dT%H:%MZ)"
+	git branch -q -M next gh-pages
 	git push -q --force "$URL" gh-pages
+	# Keep only what GitHub now has: the next push is measured against it.
+	git update-ref refs/published HEAD
+	git reflog expire --expire=now --all
+	git gc -q --prune=now
 )
 
 # --- GitHub Pages ------------------------------------------------------
+# GitHub usually turns Pages on by itself when a gh-pages branch is first
+# pushed, so asking again can fail; that isn't an error here.
 if ! gh api "repos/$REPO/pages" >/dev/null 2>&1; then
-	gh api -X POST "repos/$REPO/pages" \
-		-f "source[branch]=gh-pages" -f "source[path]=/" >/dev/null
-	echo "GitHub Pages turned on; the first build takes a minute or two."
+	if gh api -X POST "repos/$REPO/pages" \
+		-f "source[branch]=gh-pages" -f "source[path]=/" >/dev/null 2>&1; then
+		echo "GitHub Pages turned on; the first build takes a minute or two."
+	else
+		echo "(GitHub Pages: GitHub is already setting it up from gh-pages.)"
+	fi
 fi
 
 echo "Published: $BASE"
