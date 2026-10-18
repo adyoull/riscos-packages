@@ -1,0 +1,23 @@
+# Spec for tools/riscpkg.py: the reading-aloud plugin, from FolioSpeech-<ver>.zip.
+Package: FolioSpeech
+Section: Document
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: Folio
+Homepage: https://github.com/adyoull/riscos-folio
+Description: Reading aloud for Folio (British English voice)
+ Adds Read aloud and Speak selection to Folio, with a Piper voice
+ (Southern English female) and eSpeak NG's English data. It goes into
+ Folio's Plugins directory; Folio finds it the next time it starts.
+Build-Map: !Folio/Plugins/Speech -> Apps/Document/!Folio/Plugins/Speech
+Build-Notice: The speech plugin for Folio, packaged for PackMan from the
+ release zip on https://github.com/adyoull/riscos-folio/releases
+ .
+ The voice en_GB-southern_english_female-low is a Piper voice under
+ CC BY-SA 4.0; the eSpeak NG data is under the GNU GPL version 3.
+ Both licences follow.
+Build-Copyright: !Folio/Plugins/Speech/VoiceLicence
+Build-Copyright: !Folio/Plugins/Speech/eSpeakLicence

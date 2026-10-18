@@ -1,0 +1,23 @@
+# Spec for tools/riscpkg.py: the text recognition plugin, from FolioOCR-<ver>.zip.
+Package: FolioOCR
+Section: Document
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: Folio
+Homepage: https://github.com/adyoull/riscos-folio
+Description: Text recognition (OCR) for Folio, English
+ Lets Folio recognise the text on scanned pages, so they can be
+ searched, selected, copied and read aloud. Tesseract's English data
+ in two modes, Accurate and Fast. It goes into Folio's Plugins
+ directory; Folio finds it the next time it starts.
+Build-Map: !Folio/Plugins/OCR -> Apps/Document/!Folio/Plugins/OCR
+Build-Notice: The text recognition plugin for Folio, packaged for PackMan
+ from the release zip on https://github.com/adyoull/riscos-folio/releases
+ .
+ The data is Tesseract's English traineddata (tessdata and tessdata_fast,
+ with the legacy engine's parts taken out), under the Apache License 2.0,
+ which follows.
+Build-Copyright: !Folio/Plugins/OCR/DataLicence

@@ -1,0 +1,39 @@
+# Spec for tools/riscpkg.py: Folio, from its release zip Folio-<ver>.zip.
+Package: Folio
+Section: Document
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Recommends: FolioCJK
+Suggests: FolioSpeech, FolioOCR
+Components: Apps.Document.!Folio (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-folio
+Description: Reader for PDF and ebook files, built on MuPDF
+ Folio reads PDF, EPUB, FB2, MOBI, CBZ and XPS files on the desktop:
+ a bookshelf with covers, contents, find, two pages side by side, dark
+ and sepia pages, text selection and copying, dictionary look-ups,
+ PDF highlights and notes, forms, passwords, printing and export of a
+ page as a Draw file.
+ .
+ Reading aloud (FolioSpeech), text recognition for scanned pages
+ (FolioOCR) and fonts for Chinese, Japanese and Korean (FolioCJK) are
+ separate packages.
+Build-Map: !Folio -> Apps/Document/!Folio
+Build-Notice: Folio, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-folio/releases
+ .
+ Copyright (C) 2026 Andrew Youll.
+ Folio is free software under the GNU Affero General Public License,
+ version 3 or later (as MuPDF requires); its source is at the address
+ above. It includes MuPDF (Artifex, AGPL-3.0), FreeType, HarfBuzz,
+ Tesseract, Leptonica, fontconfig, expat, cJSON, eSpeak NG and
+ PThreadTicker, each under its own licence, given below.
+Build-Copyright: !Folio/COPYING
+Build-Copyright: !Folio/FontconfigLicence
+Build-Copyright: !Folio/ExpatLicence
+Build-Copyright: !Folio/cJSONLicence
+Build-Copyright: !Folio/eSpeakLicence
+Build-Copyright: !Folio/PThreadTickerLicence

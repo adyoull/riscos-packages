@@ -1,0 +1,21 @@
+# Spec for tools/riscpkg.py: the CJK font pack, from FolioCJK-<ver>.zip.
+Package: FolioCJK
+Section: Document
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: Folio
+Homepage: https://github.com/adyoull/riscos-folio
+Description: Chinese, Japanese and Korean font for Folio
+ Droid Sans Fallback Full, for showing Chinese, Japanese and Korean
+ text in documents that don't include their fonts. It goes into
+ Folio's Fonts directory.
+Build-Map: !Folio/Fonts/DroidSansFallbackFull.ttf -> Apps/Document/!Folio/Fonts/DroidSansFallbackFull.ttf
+Build-Map: !Folio/Fonts/FontLicence -> Apps/Document/!Folio/Fonts/FontLicence
+Build-Notice: The CJK font pack for Folio, packaged for PackMan from the
+ release zip on https://github.com/adyoull/riscos-folio/releases
+ .
+ Droid Sans Fallback Full is under the Apache License 2.0, which follows.
+Build-Copyright: !Folio/Fonts/FontLicence
