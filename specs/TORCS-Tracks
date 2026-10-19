@@ -1,0 +1,21 @@
+# Spec for tools/riscpkg.py: installs every TORCS tracks package.
+Package: TORCS-Tracks
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Homepage: https://github.com/adyoull/riscos-torcs
+Environment: any
+Depends: TORCS, TORCS-Tracks-DirtOval, TORCS-Tracks-Road1, TORCS-Tracks-Road2, TORCS-Tracks-Road3
+Description: All 29 extra tracks for TORCS
+ Installs the four TORCS track packages, so all 38 tracks of Debian's
+ free-software TORCS 1.3.7 are there (the main package has 9). About
+ 310 MB to download, 400 MB on disc.
+Build-Meta: yes
+Build-Notice: TORCS tracks, packaged for PackMan from the tracks pack on
+ https://github.com/adyoull/riscos-torcs/releases
+ .
+ The tracks are part of TORCS's game data (Debian's torcs 1.3.7+dfsg),
+ under the licences given in TORCS's copyright file, which follows.
+Build-Copyright: TORCS-1.3.7-riscos3.zip::!TORCS/Licences/TORCS-data

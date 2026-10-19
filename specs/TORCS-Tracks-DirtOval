@@ -1,0 +1,36 @@
+# Spec for tools/riscpkg.py: part of the TORCS tracks pack.
+Package: TORCS-Tracks-DirtOval
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Homepage: https://github.com/adyoull/riscos-torcs
+Environment: any
+Depends: TORCS
+Description: Dirt and oval tracks for TORCS
+ Tracks for TORCS 1.3.7: dirt-1, dirt-2, dirt-3, dirt-5, dirt-6,
+ mixed-1, c-speedway, d-speedway, e-speedway, e-track-5, f-speedway,
+ g-speedway, michigan. They go into TORCS's tracks directory and appear
+ in Configure Race. Install TORCS-Tracks to get all 29 extra tracks at
+ once.
+Build-Map: TORCS-tracks/!TORCS/tracks/dirt/dirt-1 -> Apps/Games/!TORCS/tracks/dirt/dirt-1
+Build-Map: TORCS-tracks/!TORCS/tracks/dirt/dirt-2 -> Apps/Games/!TORCS/tracks/dirt/dirt-2
+Build-Map: TORCS-tracks/!TORCS/tracks/dirt/dirt-3 -> Apps/Games/!TORCS/tracks/dirt/dirt-3
+Build-Map: TORCS-tracks/!TORCS/tracks/dirt/dirt-5 -> Apps/Games/!TORCS/tracks/dirt/dirt-5
+Build-Map: TORCS-tracks/!TORCS/tracks/dirt/dirt-6 -> Apps/Games/!TORCS/tracks/dirt/dirt-6
+Build-Map: TORCS-tracks/!TORCS/tracks/dirt/mixed-1 -> Apps/Games/!TORCS/tracks/dirt/mixed-1
+Build-Map: TORCS-tracks/!TORCS/tracks/oval/c-speedway -> Apps/Games/!TORCS/tracks/oval/c-speedway
+Build-Map: TORCS-tracks/!TORCS/tracks/oval/d-speedway -> Apps/Games/!TORCS/tracks/oval/d-speedway
+Build-Map: TORCS-tracks/!TORCS/tracks/oval/e-speedway -> Apps/Games/!TORCS/tracks/oval/e-speedway
+Build-Map: TORCS-tracks/!TORCS/tracks/oval/e-track-5 -> Apps/Games/!TORCS/tracks/oval/e-track-5
+Build-Map: TORCS-tracks/!TORCS/tracks/oval/f-speedway -> Apps/Games/!TORCS/tracks/oval/f-speedway
+Build-Map: TORCS-tracks/!TORCS/tracks/oval/g-speedway -> Apps/Games/!TORCS/tracks/oval/g-speedway
+Build-Map: TORCS-tracks/!TORCS/tracks/oval/michigan -> Apps/Games/!TORCS/tracks/oval/michigan
+Build-Untyped: auto
+Build-Notice: TORCS tracks, packaged for PackMan from the tracks pack on
+ https://github.com/adyoull/riscos-torcs/releases
+ .
+ The tracks are part of TORCS's game data (Debian's torcs 1.3.7+dfsg),
+ under the licences given in TORCS's copyright file, which follows.
+Build-Copyright: TORCS-1.3.7-riscos3.zip::!TORCS/Licences/TORCS-data

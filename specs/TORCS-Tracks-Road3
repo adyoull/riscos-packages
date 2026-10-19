@@ -1,0 +1,31 @@
+# Spec for tools/riscpkg.py: part of the TORCS tracks pack.
+Package: TORCS-Tracks-Road3
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Homepage: https://github.com/adyoull/riscos-torcs
+Environment: any
+Depends: TORCS
+Description: Road tracks for TORCS (Corkscrew, E-Track 3 and seven more)
+ Tracks for TORCS 1.3.7: corkscrew, e-track-3, ruudskogen, g-track-1,
+ street-1, alpine-1, g-track-3, eroad, spring. They go into TORCS's
+ tracks directory and appear in Configure Race. Install TORCS-Tracks to
+ get all 29 extra tracks at once.
+Build-Map: TORCS-tracks/!TORCS/tracks/road/corkscrew -> Apps/Games/!TORCS/tracks/road/corkscrew
+Build-Map: TORCS-tracks/!TORCS/tracks/road/e-track-3 -> Apps/Games/!TORCS/tracks/road/e-track-3
+Build-Map: TORCS-tracks/!TORCS/tracks/road/ruudskogen -> Apps/Games/!TORCS/tracks/road/ruudskogen
+Build-Map: TORCS-tracks/!TORCS/tracks/road/g-track-1 -> Apps/Games/!TORCS/tracks/road/g-track-1
+Build-Map: TORCS-tracks/!TORCS/tracks/road/street-1 -> Apps/Games/!TORCS/tracks/road/street-1
+Build-Map: TORCS-tracks/!TORCS/tracks/road/alpine-1 -> Apps/Games/!TORCS/tracks/road/alpine-1
+Build-Map: TORCS-tracks/!TORCS/tracks/road/g-track-3 -> Apps/Games/!TORCS/tracks/road/g-track-3
+Build-Map: TORCS-tracks/!TORCS/tracks/road/eroad -> Apps/Games/!TORCS/tracks/road/eroad
+Build-Map: TORCS-tracks/!TORCS/tracks/road/spring -> Apps/Games/!TORCS/tracks/road/spring
+Build-Untyped: auto
+Build-Notice: TORCS tracks, packaged for PackMan from the tracks pack on
+ https://github.com/adyoull/riscos-torcs/releases
+ .
+ The tracks are part of TORCS's game data (Debian's torcs 1.3.7+dfsg),
+ under the licences given in TORCS's copyright file, which follows.
+Build-Copyright: TORCS-1.3.7-riscos3.zip::!TORCS/Licences/TORCS-data

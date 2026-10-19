@@ -27,6 +27,8 @@ without Version) plus build fields starting "Build-":
   Build-Map: <path in release zip> -> <path in package zip> (one or more;
              zip paths with '/', e.g. !Folio -> Apps/Document/!Folio)
   Build-Copyright: <file or directory in release zip>     (one or more)
+      or <other.zip>::<file>, a zip in the same directory as the release zip
+  Build-Meta: yes      a package with no files, that only depends on others
   Build-Notice: text put at the top of RiscPkg/Copyright (continued lines)
   Build-Untyped: ffd                                      (optional)
       gives files the release zip left without a RISC OS filetype that
@@ -303,8 +305,10 @@ def read_spec(path):
             raise Fail("%s: Build-Map wants 'release/path -> Apps/Section/path'" % path)
         src, dst = (s.strip() for s in m.split("->", 1))
         maps.append((src.strip("/"), dst.strip("/")))
-    if not maps:
-        raise Fail("%s: no Build-Map" % path)
+    meta = (get(rec, "Build-Meta", "") or "").strip().lower() == "yes"
+    if not maps and not meta:
+        raise Fail("%s: no Build-Map (give Build-Meta: yes for a package that "
+                   "only pulls in others)" % path)
     copyright_files = [c.strip() for c in get_all(rec, "Build-Copyright")]
     untyped = get(rec, "Build-Untyped")
     if untyped is not None:
@@ -321,7 +325,7 @@ def read_spec(path):
     notice = "\n".join(l[1:] if l.startswith(" ") else l
                        for l in notice.split("\n"))
     notice = "\n".join("" if l == "." else l for l in notice.split("\n"))
-    return control, maps, copyright_files, notice.strip("\n"), untyped
+    return control, maps, copyright_files, notice.strip("\n"), untyped, meta
 
 
 # ------------------------------------------------------------ checks
@@ -455,7 +459,7 @@ class _Key:
 
 
 def build(args):
-    control, maps, copyright_files, notice, untyped = read_spec(args.spec)
+    control, maps, copyright_files, notice, untyped, meta = read_spec(args.spec)
     typed_here = 0
     name = get(control, "Package")
     with zipfile.ZipFile(args.source) as src:
@@ -477,8 +481,10 @@ def build(args):
                     dropped.append(n)
                 continue
             out_entries.append((info, dest))
-        if not out_entries:
+        if not out_entries and not meta:
             raise Fail("nothing in %s matches the Build-Map" % args.source)
+        if meta:
+            dropped = []
         renamed = [(i.filename, riscos_name(d)) for i, d in out_entries
                    if riscos_name(d) != d]
         seen = {}
@@ -494,6 +500,15 @@ def build(args):
         names = src.namelist()
         expanded = []
         for c in copyright_files:
+            if "::" in c:
+                other, member = c.split("::", 1)
+                other = os.path.join(os.path.dirname(os.path.abspath(args.source)), other)
+                try:
+                    with zipfile.ZipFile(other) as oz:
+                        expanded.append((member, oz.read(member)))
+                except (OSError, KeyError, zipfile.BadZipFile) as e:
+                    raise Fail("Build-Copyright %s: %s" % (c, e))
+                continue
             if c in names:
                 expanded.append(c)
                 continue
@@ -503,9 +518,13 @@ def build(args):
                 raise Fail("Build-Copyright %s isn't in %s" % (c, args.source))
             expanded += under
         for c in expanded:
+            if isinstance(c, tuple):
+                c, body = c
+            else:
+                body = src.read(c)
             parts.append(("-" * 72) + "\n" + c.rsplit("/", 1)[-1] + "\n" +
                          ("-" * 72) + "\n" +
-                         src.read(c).decode("latin-1").rstrip("\n"))
+                         body.decode("latin-1").rstrip("\n"))
         copyright_text = "\n\n".join(parts) + "\n"
 
         # The version: same build again keeps its revision if nothing

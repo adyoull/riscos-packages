@@ -39,6 +39,11 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | Reel | 0.1.27.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
 | SoftMIDI | 0.5.0.0.1-1 | General MIDI SoundFont and the *MIDIPlay player |
 | TORCS | 1.3.7.0.3-1 | The Open Racing Car Simulator, a 3D racing game |
+| TORCS-Tracks | 1.3.7.0.3-1 | All 29 extra tracks for TORCS |
+| TORCS-Tracks-DirtOval | 1.3.7.0.3-1 | Dirt and oval tracks for TORCS |
+| TORCS-Tracks-Road1 | 1.3.7.0.3-1 | Road tracks for TORCS (E-Track 2, Ole Road 1, E-Track 6) |
+| TORCS-Tracks-Road2 | 1.3.7.0.3-1 | Road tracks for TORCS (Brondehach, Wheel 1 and 2, Alpine 2) |
+| TORCS-Tracks-Road3 | 1.3.7.0.3-1 | Road tracks for TORCS (Corkscrew, E-Track 3 and seven more) |
 | TubeSearch | 0.2.0~rc7.0.1-1 | Search and browse YouTube, and play videos in Reel |
 | VCMI | 1.7.5.0.1-1 | Open-source engine for Heroes of Might and Magic III |
 | Warzone2100 | 2.3.9.0.13-1 | Real-time strategy game (Warzone 2100 2.3.9) |
