@@ -693,11 +693,34 @@ def index(args):
     _write(os.path.join(site, ".nojekyll"), "")
     _write(os.path.join(site, "index.html"),
            HTML.format(index_url=esc(base + "pkg/index"), rows="\n".join(rows)))
+    update_readme(records)
     print("index: %d package(s), %.0f MB; PackMan source %spkg/index"
           % (len(records), total / 1e6, base))
     if total > SITE_WARN:
         print("warning: the site is %.0f MB; GitHub Pages sites should stay "
               "under 1 GB" % (total / 1e6))
+
+
+def update_readme(records):
+    """Keeps the package table in README.md (next to tools/) in step with
+    the index, so it never goes stale."""
+    readme = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                          "README.md")
+    if not os.path.exists(readme):
+        return
+    recs = [parse_control(r)[0] for r in records]
+    rows = "\n".join("| %s | %s | %s |" % (get(r, "Package"), get(r, "Version"),
+                                           get(r, "Description", "").split("\n")[0])
+                     for r in recs)
+    table = "| Package | Version | What it is |\n|---|---|---|\n" + rows + "\n\n"
+    with open(readme, encoding="utf-8") as f:
+        text = f.read()
+    new_text = re.sub(r"\| Package \| Version \| What it is \|.*?\n\n", lambda m: table,
+                      text, count=1, flags=re.S)
+    if new_text != text:
+        with open(readme, "w", encoding="utf-8") as f:
+            f.write(new_text)
+        print("index: README.md package table updated")
 
 
 def _md5(p):
