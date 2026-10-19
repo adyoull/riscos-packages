@@ -17,10 +17,10 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | ClawsMail | 4.4.0.0.17-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.22-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
-| Folio | 0.0.1.0.49-1 | Reader for PDF and ebook files, built on MuPDF |
-| FolioCJK | 0.0.1.0.49-1 | Chinese, Japanese and Korean font for Folio |
-| FolioOCR | 0.0.1.0.49-1 | Text recognition (OCR) for Folio, English |
-| FolioSpeech | 0.0.1.0.49-1 | Reading aloud for Folio (British English voice) |
+| Folio | 0.0.1.0.50-1 | Reader for PDF and ebook files, built on MuPDF |
+| FolioCJK | 0.0.1.0.50-1 | Chinese, Japanese and Korean font for Folio |
+| FolioOCR | 0.0.1.0.50-1 | Text recognition (OCR) for Folio, English |
+| FolioSpeech | 0.0.1.0.50-1 | Reading aloud for Folio (British English voice) |
 | Freeciv | 3.2.6.0.14-1 | Civilization-style turn-based strategy game (Freeciv 3.2.6) |
 | Geany | 2.1.0.6-1 | Geany programmer's editor (GTK 3) |
 | Gnumeric | 1.12.57.0.11-1 | Gnumeric spreadsheet (GTK 3) |
