@@ -232,6 +232,31 @@ def arc0_extra(filetype, when, attr=0x33):
     return (0x4341).to_bytes(2, "little") + len(body).to_bytes(2, "little") + body
 
 
+# Names in the release zips are Unix-style; PackMan writes them to disc as
+# they are (only swapping '/' and '.'), and FileCore refuses characters
+# such as '@' and space ("Name not recognised"). Map each name the way
+# UnixLib does (common/riscosify.c __filename_char_map), so a ported
+# program asking for "arrow@2.png" finds "arrow_2/png", and one asking for
+# "true random.json" finds it with a hard space.
+UNIXLIB_CHARS = {c: "_" for c in '"$%&:@\\^|'}
+UNIXLIB_CHARS.update({" ": "\xa0", "#": "?"})
+
+
+def riscos_name(path):
+    return "".join(UNIXLIB_CHARS.get(ch, ch) if ord(ch) > 31 and ch != "\x7f"
+                   else "_" for ch in path)
+
+
+class Latin1Info(zipfile.ZipInfo):
+    """A zip entry whose name is stored as Latin-1 bytes (as RISC OS zip
+    tools do), not UTF-8, so a hard space stays one byte."""
+    def _encodeFilenameFlags(self):
+        try:
+            return self.filename.encode("ascii"), self.flag_bits
+        except UnicodeEncodeError:
+            return self.filename.encode("latin-1"), self.flag_bits & ~0x800
+
+
 # Filetypes for "Build-Untyped: auto", by the name's extension. Only types
 # RISC OS's MimeMap gives the same extension, so a UnixLib program that
 # uses ",xyz" filetype suffixes still sees the plain name; anything else
@@ -358,6 +383,10 @@ def check_zip(path):
         for info in z.infolist():
             n = info.filename
             top = n.split("/", 1)[0]
+            raw = n.encode("cp437") if not info.flag_bits & 0x800 else n.encode("utf-8")
+            if any(b in raw for b in b' "$%&:@\\^|#*') or info.flag_bits & 0x800:
+                errs.append("%s: %r has a character RISC OS filenames can't hold"
+                            % (path, n))
             if top != "RiscPkg" and top not in LOGICAL_ROOTS:
                 errs.append("%s: %s isn't under a logical path the policy knows"
                             % (path, n))
@@ -450,6 +479,15 @@ def build(args):
             out_entries.append((info, dest))
         if not out_entries:
             raise Fail("nothing in %s matches the Build-Map" % args.source)
+        renamed = [(i.filename, riscos_name(d)) for i, d in out_entries
+                   if riscos_name(d) != d]
+        seen = {}
+        for i, d in out_entries:
+            r = riscos_name(d)
+            if r in seen:
+                raise Fail("%s and %s both become %s on RISC OS"
+                           % (seen[r], i.filename, r))
+            seen[r] = i.filename
 
         # RiscPkg/Copyright: the notice, then each licence file.
         parts = [notice] if notice else []
@@ -493,7 +531,7 @@ def build(args):
                     zi.compress_type = zipfile.ZIP_DEFLATED
                     z.writestr(zi, text.encode("latin-1"))
                 for info, dest in out_entries:
-                    zi = zipfile.ZipInfo(dest, info.date_time)
+                    zi = Latin1Info(riscos_name(dest), info.date_time)
                     zi.create_system = info.create_system
                     zi.external_attr = info.external_attr
                     zi.extra = info.extra
@@ -549,6 +587,10 @@ def build(args):
     os.replace(tmp, out)
     for d in dropped:
         print("left out (not in any Build-Map): %s" % d)
+    if renamed:
+        print("%d name(s) changed for RISC OS as UnixLib maps them, e.g. %s -> %s"
+              % (len(renamed), renamed[0][0].rsplit("/", 1)[-1],
+                 renamed[0][1].rsplit("/", 1)[-1]))
     print("made %s (%d bytes)" % (out, len(data)))
     return out
 
