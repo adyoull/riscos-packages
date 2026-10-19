@@ -1,0 +1,29 @@
+# Spec for tools/riscpkg.py: TubeSearch.
+Package: TubeSearch
+Section: Video
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Reel (>= 0.1.27)
+Components: Apps.Video.!TubeSearch (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-tubesearch
+Description: Search and browse YouTube, and play videos in Reel
+ Shows YouTube search results, channels and related videos with their
+ pictures, and plays the video you click in Reel, using the Pi's
+ hardware decoder. It answers YouTube's challenges itself with QuickJS
+ and yt-dlp's solver scripts. Needs AcornSSL (RISC OS 5.28 or later)
+ and a 32K or 16M colour desktop. Not affiliated with YouTube or
+ Google.
+ .
+ This is a release candidate.
+Build-Map: !TubeSearch -> Apps/Video/!TubeSearch
+Build-Notice: TubeSearch, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-tubesearch/releases
+ .
+ TubeSearch is under the MIT licence. It includes QuickJS (MIT), yt-dlp's
+ ejs scripts (Unlicense), meriyah (ISC) and astring (MIT). Licences
+ follow.
+Build-Copyright: !TubeSearch/COPYING
+Build-Copyright: !TubeSearch/Licences
