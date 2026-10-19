@@ -1,0 +1,26 @@
+# Spec for tools/riscpkg.py: GOGImport (part of the VCMI release).
+Package: GOGImport
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!GOGImport (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-vcmi
+Description: Gets Heroes III's files out of the GOG installer for VCMI
+ Drag the GOG.com installer of Heroes of Might and Magic III Complete
+ onto it and it unpacks Data, Maps and Mp3 into !VCMI.H3data, in a
+ TaskWindow, so no other computer is needed to set up VCMI. It uses
+ innoextract 1.9.
+Build-Map: !GOGImport -> Apps/Games/!GOGImport
+Build-Notice: GOGImport, packaged for PackMan from the VCMI release on
+ https://github.com/adyoull/riscos-vcmi/releases
+ .
+ GOGImport is under the GNU GPL version 2 or later (as VCMI). It
+ includes innoextract 1.9 (zlib licence), liblzma, bzip2 and Boost,
+ under the licences that follow. Heroes of Might and Magic is a
+ trademark of Ubisoft; GOG is a trademark of CD PROJEKT. This tool is
+ not made or endorsed by either.
+Build-Copyright: !GOGImport/docs

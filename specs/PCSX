@@ -1,0 +1,30 @@
+# Spec for tools/riscpkg.py: PCSX ReARMed.
+Package: PCSX
+Section: Emulation
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Emulation.!PCSX (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-pcsx
+Description: PlayStation emulator (PCSX ReARMed)
+ PCSX ReARMed with a native desktop frontend: full speed on a Pi 4
+ with its ARM recompiler and NEON renderer, a scalable window or full
+ screen, sound, keyboard and USB game pads, save states, memory cards
+ and a games library. Plays .cue/.bin, .chd, .pbp, .iso, CloneCD and
+ games inside .zip and .7z files. A built-in BIOS replacement runs most
+ games. Needs ARMv7 with NEON. Use only discs and BIOS images you own.
+ PlayStation is a trademark of Sony Interactive Entertainment; this
+ port isn't connected with Sony.
+Build-Map: !PCSX -> Apps/Emulation/!PCSX
+Build-Notice: PCSX, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-pcsx/releases
+ .
+ PCSX ReARMed (github.com/notaz/pcsx_rearmed) and this port are under
+ the GNU GPL version 2 or later; the libraries keep their own licences.
+ The source is on the release page. Licences follow.
+Build-Copyright: !PCSX/docs/COPYING
+Build-Copyright: !PCSX/docs/Licences
+Build-Copyright: !PCSX/docs/Source

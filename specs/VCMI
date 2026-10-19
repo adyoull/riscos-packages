@@ -1,0 +1,29 @@
+# Spec for tools/riscpkg.py: VCMI.
+Package: VCMI
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Suggests: GOGImport
+Components: Apps.Games.!VCMI (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-vcmi
+Description: Open-source engine for Heroes of Might and Magic III
+ VCMI 1.7.5 plays Heroes of Might and Magic III (Shadow of Death and
+ Complete) in a desktop window or full screen. It needs the files from
+ your own copy of the game (GOG.com or CD); GOGImport gets them out of
+ the GOG installer. ARMv7 with VFP; a Raspberry Pi 4 is recommended.
+Build-Map: !VCMI -> Apps/Games/!VCMI
+Build-Notice: VCMI, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-vcmi/releases
+ .
+ VCMI 1.7.5 (vcmi.eu) and the RISC OS changes are under the GNU GPL
+ version 2 or later; FuzzyLite is GPL version 3, so the program as a
+ whole is passed on under the GPL version 3. The libraries keep their
+ own licences. Heroes of Might and Magic is a trademark of Ubisoft;
+ none of the game's files are included. Licences follow.
+Build-Copyright: !VCMI/docs/COPYING
+Build-Copyright: !VCMI/docs/Licences
+Build-Copyright: !VCMI/docs/PThreadTicker-Licence

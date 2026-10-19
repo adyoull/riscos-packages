@@ -640,8 +640,12 @@ def index(args):
         print("index: %s %s" % (name, version))
     for f in os.listdir(pkgdir):
         if f not in keep:
-            os.remove(os.path.join(pkgdir, f))
-            print("index: dropped old %s from the site" % f)
+            try:
+                os.remove(os.path.join(pkgdir, f))
+                print("index: dropped old %s from the site" % f)
+            except OSError as e:
+                raise Fail("couldn't remove the old %s from site/packages (%s); "
+                           "move it out and run index again" % (f, e.strerror))
     _write(os.path.join(site, "pkg", "index"), "\n".join(records))
     _write(os.path.join(site, "pointer"), "\n".join(pointer) + "\n")
     _write(os.path.join(site, ".nojekyll"), "")
