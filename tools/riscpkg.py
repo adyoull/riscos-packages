@@ -15,6 +15,10 @@ keep a package index for a static web host (GitHub Pages).
       site/packages, and site/pkg/index (the PackMan source), site/pointer
       and site/index.html are written.
 
+  riscpkg.py import PACKAGE.zip
+      Takes a package zip that was built elsewhere (with its own RiscPkg
+      directory, triggers and all) into the pool, after the same checks.
+
   riscpkg.py check PACKAGE.zip
       Checks a package zip on its own.
 
@@ -53,7 +57,7 @@ import zipfile
 SECTIONS = """Administration Archive Audio Chat Communication Database Demo
 Desktop Development Device Disc Document File Education Emulation Font Games
 Graphics Library Mail Mathematics Miscellaneous Network Presentation Printing
-Spreadsheet System Text Video Web""".split()
+Spreadsheet System Text Video Web""".split() + ["Fonts"]   # autobuilder font packages use "Fonts"
 PRIORITIES = "Required Important Standard Optional Extra".split()
 LOGICAL_ROOTS = """Apps Manuals Resources System ToBeLoaded ToBeTasks Boot
 Bootloader Diversions Documents Printing Utilities !Boot !System""".split()
@@ -614,6 +618,40 @@ def build(args):
     return out
 
 
+def do_import(args):
+    """Takes a package zip someone else already built (e.g. riscos-gtk's
+    TTF-Noto-Color-Emoji, with its own RiscPkg/Triggers) into the pool,
+    after the same checks a built one gets."""
+    rec, errs, warns = check_zip(args.zip)
+    for w in warns:
+        print("warning:", w)
+    if errs:
+        raise Fail("the package failed its checks:\n  " + "\n  ".join(errs))
+    name, version = get(rec, "Package"), get(rec, "Version")
+    with zipfile.ZipFile(args.zip) as z:
+        for n in z.namelist():
+            if n.startswith("RiscPkg/Triggers/") and not n.endswith("/"):
+                t = arc0_type(z.getinfo(n))
+                if t != 0xFEB:
+                    raise Fail("%s: trigger %s should be an Obey file (feb), is %s"
+                               % (args.zip, n, t))
+    existing = pool_packages(args.pool).get(name, [])
+    for v, p in existing:
+        if v == version:
+            if _md5(p) == _md5(args.zip):
+                print("%s %s: already in the pool (%s)" % (name, version, p))
+                return
+            raise Fail("%s %s is already in the pool with other contents; the "
+                       "package's revision has to go up" % (name, version))
+    if existing and vercmp(version, existing[-1][0]) < 0:
+        raise Fail("%s %s is older than %s, already in the pool"
+                   % (name, version, existing[-1][0]))
+    os.makedirs(args.pool, exist_ok=True)
+    out = os.path.join(args.pool, "%s_%s.zip" % (name, version))
+    shutil.copyfile(args.zip, out)
+    print("imported %s (%s %s)" % (out, name, version))
+
+
 # --------------------------------------------------------------- the site
 
 HTML = """<!doctype html>
@@ -772,6 +810,9 @@ def main():
     i.add_argument("--pool", default=os.path.join(here, "pool"))
     i.add_argument("--site", default=os.path.join(here, "site"))
     i.add_argument("--base", default="https://adyoull.github.io/riscos-packages/")
+    im = sub.add_parser("import")
+    im.add_argument("zip")
+    im.add_argument("--pool", default=os.path.join(here, "pool"))
     c = sub.add_parser("check")
     c.add_argument("zip", nargs="+")
     v = sub.add_parser("vercmp")
@@ -783,6 +824,8 @@ def main():
             build(args)
         elif args.cmd == "index":
             index(args)
+        elif args.cmd == "import":
+            do_import(args)
         elif args.cmd == "check":
             bad = 0
             for z in args.zip:

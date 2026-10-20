@@ -7,6 +7,7 @@ Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32, vfpv3
 Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Recommends: TTF-Noto-Color-Emoji
 Components: Apps.Office.!Gnumeric (Movable LookAt)
 Homepage: https://github.com/adyoull/riscos-gtk
 Description: Gnumeric spreadsheet (GTK 3)

@@ -22,6 +22,14 @@ export GIT_COMMITTER_NAME="$AUTHOR_NAME" GIT_COMMITTER_EMAIL="$AUTHOR_EMAIL"
 
 gh auth status >/dev/null
 
+# Only one publish at a time: two at once race for gh-pages on GitHub
+# ("cannot lock ref 'refs/heads/gh-pages'") and one of them is rejected.
+if ! mkdir .publish-lock 2>/dev/null; then
+	echo "Another publish.sh is running (or one was stopped: remove .publish-lock)." >&2
+	exit 1
+fi
+trap 'rmdir .publish-lock' EXIT
+
 python3 tools/riscpkg.py index --base "$BASE"
 
 # --- the repository and main ------------------------------------------

@@ -4,6 +4,8 @@
 #   ./package.sh Reel Geany only these
 # Each line of releases is
 #   <Package> <upstream version> <build> <release zip, relative to RiscOS/>
+# or, for a package zip built elsewhere,
+#   <Package> import - <package zip, relative to RiscOS/>
 # Packaging a release that's already in pool/ does nothing, so it's safe to
 # run again after updating one line. Then run ./publish.sh.
 set -eu
@@ -16,8 +18,13 @@ while read -r pkg up build zip; do
 	if [ $# -gt 0 ]; then
 		case "$want" in *" $pkg "*) ;; *) continue;; esac
 	fi
-	if [ ! -f "specs/$pkg" ]; then echo "$pkg: no specs/$pkg" >&2; fail=1; continue; fi
 	if [ ! -f "$ROOT/$zip" ]; then echo "$pkg: no $ROOT/$zip" >&2; fail=1; continue; fi
+	if [ "$up" = import ]; then
+		# A ready-made package zip (built by the program's own tools).
+		python3 tools/riscpkg.py import "$ROOT/$zip" || fail=1
+		continue
+	fi
+	if [ ! -f "specs/$pkg" ]; then echo "$pkg: no specs/$pkg" >&2; fail=1; continue; fi
 	python3 tools/riscpkg.py build "specs/$pkg" --from "$ROOT/$zip" \
 		--upstream "$up" --build "$build" || fail=1
 done < releases

@@ -4,3 +4,4 @@ __pycache__/
 *.tmp
 .pages/
 releases
+.publish-lock/
