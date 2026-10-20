@@ -33,7 +33,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | OpenTTD | 14.1.0.7-1 | Open-source transport simulation game (OpenTTD 14.1) |
 | OpenTTD-OpenMSX | 14.1.0.7-1 | Music for OpenTTD (OpenMSX) |
 | OpenTTD-OpenSFX | 14.1.0.7-1 | Sound effects for OpenTTD (OpenSFX) |
-| PCSX | 26.0.1-1 | PlayStation emulator (PCSX ReARMed) |
+| PCSX | 26.0.2-1 | PlayStation emulator (PCSX ReARMed) |
 | PThreadTicker | 0.03.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
 | RDPServer | 0.2~rc3.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
 | Reel | 0.1.28.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
