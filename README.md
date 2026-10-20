@@ -36,7 +36,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | PCSX | 26.0.1-1 | PlayStation emulator (PCSX ReARMed) |
 | PThreadTicker | 0.03.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
 | RDPServer | 0.2~rc3.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
-| Reel | 0.1.27.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
+| Reel | 0.1.28.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
 | SoftMIDI | 0.5.0.0.1-1 | General MIDI SoundFont and the *MIDIPlay player |
 | TORCS | 1.3.7.0.3-1 | The Open Racing Car Simulator, a 3D racing game |
 | TORCS-Tracks | 1.3.7.0.3-1 | All 29 extra tracks for TORCS |
