@@ -14,8 +14,6 @@ Description: Remote Desktop (RDP) server for the RISC OS desktop
  FreeRDP or !RDPClient, with TLS 1.2, sound and logins. The server
  runs as a module, so it keeps serving when the desktop isn't
  multitasking.
- .
- This is a release candidate.
 Build-Map: !RDPServer -> Apps/Network/!RDPServer
 Build-Notice: RDPServer, packaged for PackMan from the release zip on
  https://github.com/adyoull/riscos-rdpserver/releases

@@ -35,7 +35,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | OpenTTD-OpenSFX | 14.1.0.7-1 | Sound effects for OpenTTD (OpenSFX) |
 | PCSX | 26.0.2-1 | PlayStation emulator (PCSX ReARMed) |
 | PThreadTicker | 0.03.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
-| RDPServer | 0.2~rc3.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
+| RDPServer | 0.2.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
 | Reel | 0.1.28.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
 | SoftMIDI | 0.5.0.0.1-1 | General MIDI SoundFont and the *MIDIPlay player |
 | TORCS | 1.3.7.0.3-1 | The Open Racing Car Simulator, a 3D racing game |
@@ -45,7 +45,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | TORCS-Tracks-Road2 | 1.3.7.0.3-1 | Road tracks for TORCS (Brondehach, Wheel 1 and 2, Alpine 2) |
 | TORCS-Tracks-Road3 | 1.3.7.0.3-1 | Road tracks for TORCS (Corkscrew, E-Track 3 and seven more) |
 | TTF-Noto-Color-Emoji | 2.051.0.1-1 | Noto Color Emoji font for fontconfig programs |
-| TubeSearch | 0.2.0~rc7.0.1-1 | Search and browse YouTube, and play videos in Reel |
+| TubeSearch | 0.2.0~rc11.0.1-1 | Search and browse YouTube, and play videos in Reel |
 | VCMI | 1.7.5.0.1-1 | Open-source engine for Heroes of Might and Magic III |
 | Warzone2100 | 2.3.9.0.13-1 | Real-time strategy game (Warzone 2100 2.3.9) |
 | YSFlight | 0.0.1-1 | Free flight simulator (YSFlight Community Edition) |
