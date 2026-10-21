@@ -17,7 +17,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | ClawsMail | 4.4.0.0.19-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.22-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
-| Folio | 0.0.1.0.55-1 | Reader for PDF and ebook files, built on MuPDF |
+| Folio | 0.0.1.0.58-1 | Reader for PDF and ebook files, built on MuPDF |
 | FolioCJK | 1.0.0.1-1 | Chinese, Japanese and Korean font for Folio |
 | FolioOCR | 1.0.0.1-1 | Text recognition (OCR) for Folio, English |
 | FolioSpeech | 1.0.0.1-1 | Reading aloud for Folio (British English voice) |
