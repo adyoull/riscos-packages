@@ -45,8 +45,8 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | TORCS-Tracks-Road2 | 1.3.7.0.3-1 | Road tracks for TORCS (Brondehach, Wheel 1 and 2, Alpine 2) |
 | TORCS-Tracks-Road3 | 1.3.7.0.3-1 | Road tracks for TORCS (Corkscrew, E-Track 3 and seven more) |
 | TTF-Noto-Color-Emoji | 2.051.0.1-1 | Noto Color Emoji font for fontconfig programs |
-| TubeSearch | 0.2.0~rc11.0.1-1 | Search and browse YouTube, and play videos in Reel |
-| VCMI | 1.7.5.0.1-1 | Open-source engine for Heroes of Might and Magic III |
+| TubeSearch | 0.2.0~rc12.0.1-1 | Search and browse YouTube, and play videos in Reel |
+| VCMI | 1.7.5.0.2-1 | Open-source engine for Heroes of Might and Magic III |
 | Warzone2100 | 2.3.9.0.13-1 | Real-time strategy game (Warzone 2100 2.3.9) |
 | YSFlight | 0.0.1-1 | Free flight simulator (YSFlight Community Edition) |
 
