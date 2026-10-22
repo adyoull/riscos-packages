@@ -638,8 +638,12 @@ def do_import(args):
     existing = pool_packages(args.pool).get(name, [])
     for v, p in existing:
         if v == version:
-            if _md5(p) == _md5(args.zip):
-                print("%s %s: already in the pool (%s)" % (name, version, p))
+            with zipfile.ZipFile(p) as a, zipfile.ZipFile(args.zip) as b:
+                same = payload_key(a) == payload_key(b)
+            if same:
+                # Rebuilt with new dates only: keep the one already published.
+                print("%s %s: already in the pool with the same contents (%s)"
+                      % (name, version, p))
                 return
             raise Fail("%s %s is already in the pool with other contents; the "
                        "package's revision has to go up" % (name, version))
