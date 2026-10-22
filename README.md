@@ -15,7 +15,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 |---|---|---|
 | AddrSpace | 0.1.0.0.1-1 | Shows what is using RISC OS's logical address space |
 | ClawsMail | 4.4.0.0.19-1 | Claws Mail email client (GTK 3) |
-| FFmpeg | 5.1.10.0.22-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
+| FFmpeg | 5.1.10.0.23-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
 | Folio | 0.0.1.0.58-1 | Reader for PDF and ebook files, built on MuPDF |
 | FolioCJK | 1.0.0.1-1 | Chinese, Japanese and Korean font for Folio |
@@ -36,7 +36,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | PCSX | 26.0.2-1 | PlayStation emulator (PCSX ReARMed) |
 | PThreadTicker | 0.03.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
 | RDPServer | 0.2.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
-| Reel | 0.1.28.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
+| Reel | 0.1.29.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
 | SoftMIDI | 0.5.0.0.1-1 | General MIDI SoundFont and the *MIDIPlay player |
 | TORCS | 1.3.7.0.3-1 | The Open Racing Car Simulator, a 3D racing game |
 | TORCS-Tracks | 1.3.7.0.3-1 | All 29 extra tracks for TORCS |
