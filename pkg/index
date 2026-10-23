@@ -1,0 +1,721 @@
+Package: AddrSpace
+Version: 0.1.0.0.1-1
+Section: System
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Utilities.!AddrSpace (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-addrspace
+Description: Shows what is using RISC OS's logical address space
+ Lists every dynamic area with its owner, size and reserved space,
+ highlights changes, measures the free space, and finds the cause of
+ "Unable to allocate logical address space".
+Size: 130808
+MD5Sum: 74e31e2ad867b2cff18c3e889697c9a2
+URL: https://adyoull.github.io/riscos-packages/packages/AddrSpace_0.1.0.0.1-1.zip
+
+Package: ClawsMail
+Version: 4.4.0.0.20-1
+Section: Mail
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Recommends: TTF-Noto-Color-Emoji
+Components: Apps.Network.!ClawsMail (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: Claws Mail email client (GTK 3)
+ An email client with POP3, IMAP and SMTP, all with TLS through
+ AcornSSL (RISC OS 5.28 or later), and local MH folders. HTML mail is
+ laid out, and links open in your browser. Starts on the icon bar.
+ .
+ This is a public beta of the riscos-gtk ports.
+Size: 10966391
+MD5Sum: ee0eec56a27c8dccc1eddf059ff940d2
+URL: https://adyoull.github.io/riscos-packages/packages/ClawsMail_4.4.0.0.20-1.zip
+
+Package: FFmpeg
+Version: 5.1.10.0.23-1
+Section: Video
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Video.!FFmpeg (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-ffmpeg
+Description: FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON
+ FFmpeg 5.1.10 with its NEON code, made safe for RISC OS's alignment
+ checks: ffmpeg, ffprobe and ffplay, and an icon bar front end (drop a
+ file on it to play or convert it). H.264 and HEVC hardware decoding
+ on the Pi through ReelHWAccel. Needs ARMv7 with NEON.
+Size: 43234621
+MD5Sum: f0553ecd9181af0fbb2768dde7945a97
+URL: https://adyoull.github.io/riscos-packages/packages/FFmpeg_5.1.10.0.23-1.zip
+
+Package: fheroes2
+Version: 1.1.17.0.5-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!fheroes2 (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-fheroes2
+Description: Free re-creation of the Heroes of Might and Magic II engine
+ Turn-based fantasy strategy in a desktop window or full screen, with
+ music through a built-in MIDI synth (or Ogg, MP3 or FLAC tracks).
+ It needs the data from the original game (GOG or CD) or the free
+ demo, which you add yourself. ARMv7 (Pi 2 or later).
+Size: 14415091
+MD5Sum: 576767b8826337afec1e95b30a70c5ab
+URL: https://adyoull.github.io/riscos-packages/packages/fheroes2_1.1.17.0.5-1.zip
+
+Package: Folio
+Version: 0.0.1.0.60-1
+Section: Document
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Recommends: FolioCJK
+Suggests: FolioSpeech, FolioOCR
+Components: Apps.Document.!Folio (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-folio
+Description: Reader for PDF and ebook files, built on MuPDF
+ Folio reads PDF, EPUB, FB2, MOBI, CBZ and XPS files on the desktop:
+ a bookshelf with covers, contents, find, two pages side by side, dark
+ and sepia pages, text selection and copying, dictionary look-ups,
+ PDF highlights and notes, forms, passwords, printing and export of a
+ page as a Draw file.
+ .
+ Reading aloud (FolioSpeech), text recognition for scanned pages
+ (FolioOCR) and fonts for Chinese, Japanese and Korean (FolioCJK) are
+ separate packages.
+Size: 12984901
+MD5Sum: 7f236bbd522a16384d27d3017187aa14
+URL: https://adyoull.github.io/riscos-packages/packages/Folio_0.0.1.0.60-1.zip
+
+Package: FolioCJK
+Version: 1.0.0.1-1
+Section: Document
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: Folio
+Homepage: https://github.com/adyoull/riscos-folio
+Description: Chinese, Japanese and Korean font for Folio
+ Droid Sans Fallback Full, for showing Chinese, Japanese and Korean
+ text in documents that don't include their fonts. It goes into
+ Folio's Fonts directory.
+Size: 2391191
+MD5Sum: 67c476b879a208f38dac631e1a6afab0
+URL: https://adyoull.github.io/riscos-packages/packages/FolioCJK_1.0.0.1-1.zip
+
+Package: FolioOCR
+Version: 1.0.0.1-1
+Section: Document
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: Folio
+Homepage: https://github.com/adyoull/riscos-folio
+Description: Text recognition (OCR) for Folio, English
+ Lets Folio recognise the text on scanned pages, so they can be
+ searched, selected, copied and read aloud. Tesseract's English data
+ in two modes, Accurate and Fast. It goes into Folio's Plugins
+ directory; Folio finds it the next time it starts.
+Size: 4947013
+MD5Sum: 9bf896999a859d146555d8f8774384ea
+URL: https://adyoull.github.io/riscos-packages/packages/FolioOCR_1.0.0.1-1.zip
+
+Package: FolioSpeech
+Version: 1.0.0.1-1
+Section: Document
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: Folio
+Homepage: https://github.com/adyoull/riscos-folio
+Description: Reading aloud for Folio (British English voice)
+ Adds Read aloud and Speak selection to Folio, with a Piper voice
+ (Southern English female) and eSpeak NG's English data. It goes into
+ Folio's Plugins directory; Folio finds it the next time it starts.
+Size: 29694058
+MD5Sum: 1850d57d9b4bf664c82e7187880a21b2
+URL: https://adyoull.github.io/riscos-packages/packages/FolioSpeech_1.0.0.1-1.zip
+
+Package: Freeciv
+Version: 3.2.6.0.14-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!Freeciv (Movable LookAt), Apps.Games.!CivServer (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-freeciv
+Description: Civilization-style turn-based strategy game (Freeciv 3.2.6)
+ The SDL2 client and the server: play the computer on the desktop in a
+ window or full window, or join a network game. About 80 MB free
+ memory needed.
+ .
+ This is a test build.
+Size: 23210695
+MD5Sum: efa0469c503fbbbf00daab488a6de5ad
+URL: https://adyoull.github.io/riscos-packages/packages/Freeciv_3.2.6.0.14-1.zip
+
+Package: Geany
+Version: 2.1.0.9-1
+Section: Development
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Recommends: TTF-Noto-Color-Emoji
+Components: Apps.Development.!Geany (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: Geany programmer's editor (GTK 3)
+ A fast programmer's editor: syntax highlighting for dozens of
+ languages, a symbol list and tabs. Build commands run in a TaskWindow
+ with errors listed in the Compiler tab (DDE throwback supported).
+ .
+ This is a public beta of the riscos-gtk ports.
+Size: 12059191
+MD5Sum: 1288fc1bff17ad5b93b0714b66eda70b
+URL: https://adyoull.github.io/riscos-packages/packages/Geany_2.1.0.9-1.zip
+
+Package: Gnumeric
+Version: 1.12.57.0.14-1
+Section: Spreadsheet
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Recommends: TTF-Noto-Color-Emoji
+Components: Apps.Office.!Gnumeric (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: Gnumeric spreadsheet (GTK 3)
+ The GNOME spreadsheet: hundreds of functions, charts, and Excel
+ (.xls/.xlsx), OpenDocument, Lotus 1-2-3, Quattro Pro, HTML, CSV and
+ text files. RISC OS Save and Open boxes, Wimp menus and an icon bar
+ icon; CSV files open from the Filer.
+ .
+ This is a public beta of the riscos-gtk ports.
+Size: 13201073
+MD5Sum: 61bee3d2312c3a8febc801d15e293ce1
+URL: https://adyoull.github.io/riscos-packages/packages/Gnumeric_1.12.57.0.14-1.zip
+
+Package: GOGImport
+Version: 1.0.0.1-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!GOGImport (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-vcmi
+Description: Gets Heroes III's files out of the GOG installer for VCMI
+ Drag the GOG.com installer of Heroes of Might and Magic III Complete
+ onto it and it unpacks Data, Maps and Mp3 into !VCMI.H3data, in a
+ TaskWindow, so no other computer is needed to set up VCMI. It uses
+ innoextract 1.9.
+Size: 768789
+MD5Sum: 7e0da5a25dd1450f65f674b3d5c112f0
+URL: https://adyoull.github.io/riscos-packages/packages/GOGImport_1.0.0.1-1.zip
+
+Package: Julius
+Version: 1.8.0.0.1-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!Julius (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-julius
+Description: Open-source engine for Caesar III, the Roman city-building game
+ Plays the original Caesar III and its saved games in a desktop window
+ or full screen, with wide-screen support. It needs the files from your
+ own copy of Caesar III (1.0.1.0: GOG, Steam or CD). Pi 4 recommended.
+Size: 3980682
+MD5Sum: 40c931bbe8320ed8d1aacba869df9e3d
+URL: https://adyoull.github.io/riscos-packages/packages/Julius_1.8.0.0.1-1.zip
+
+Package: L3afpad
+Version: 0.8.18.1.11.0.30-1
+Section: Text
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Recommends: TTF-Noto-Color-Emoji
+Components: Apps.Document.!L3afpad (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: L3afpad simple text editor (GTK 3)
+ A lightweight text editor with a window per document, printing
+ through !Printers, RISC OS Save and Open boxes and a Choices window.
+ .
+ This is a public beta of the riscos-gtk ports.
+Size: 9259375
+MD5Sum: 0e770845ccd3a9518c52d3a48c9ccaee
+URL: https://adyoull.github.io/riscos-packages/packages/L3afpad_0.8.18.1.11.0.30-1.zip
+
+Package: Matinee
+Version: 0.1.1.0.1-1
+Section: Video
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Video.!Matinee (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-matinee
+Description: Plex, Jellyfin and DLNA media client with a built-in player
+ Browse films and TV on a Plex, Jellyfin or DLNA server and play them
+ in Matinee's own window; the server converts what Matinee can't play.
+ Continue watching, resume points, and hand-off to Reel. Plex is a
+ trademark of Plex, Inc.; Matinee is not affiliated with it.
+Size: 11600188
+MD5Sum: 6f25a620ce5e53b1e571d20fa2ef1b55
+URL: https://adyoull.github.io/riscos-packages/packages/Matinee_0.1.1.0.1-1.zip
+
+Package: mtPaint
+Version: 3.50.14.0.9-1
+Section: Graphics
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Recommends: TTF-Noto-Color-Emoji
+Components: Apps.Graphics.!mtPaint (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: mtPaint painting program (GTK 3)
+ A painting program for pixel art and photos: palettes, layers and
+ animation frames; loads and saves PNG, JPEG, GIF and BMP. RISC OS Save
+ and Open boxes; Adjust paints with the second colour.
+ .
+ This is a public beta of the riscos-gtk ports.
+Size: 9285287
+MD5Sum: ff8a163525c3fd287da78fde289045f2
+URL: https://adyoull.github.io/riscos-packages/packages/mtPaint_3.50.14.0.9-1.zip
+
+Package: NetStats
+Version: 1.06.0.1-1
+Section: Network
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Components: Apps.Network.!NetStats (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-netstats
+Description: Network statistics: traffic graphs, connections and LAN devices
+ Per-interface send and receive rates with a live graph, TCP, UDP and
+ IP counters, open connections, routes and DNS, and a scan of the
+ devices on the network with their names and makers.
+Size: 352854
+MD5Sum: c8b03cb68d03ff9216271900c640fc56
+URL: https://adyoull.github.io/riscos-packages/packages/NetStats_1.06.0.1-1.zip
+
+Package: OpenTTD
+Version: 14.1.0.7-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Suggests: OpenTTD-OpenSFX, OpenTTD-OpenMSX
+Components: Apps.Games.!OpenTTD (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-openttd
+Description: Open-source transport simulation game (OpenTTD 14.1)
+ Build road, rail, sea and air networks, with the free OpenGFX
+ graphics. Sound effects (OpenTTD-OpenSFX) and music (OpenTTD-OpenMSX)
+ are separate packages. ARMv7 with VFP; about 128 MB free.
+Size: 18203183
+MD5Sum: 734417eca6b9ce90b4f07cf22b125f98
+URL: https://adyoull.github.io/riscos-packages/packages/OpenTTD_14.1.0.7-1.zip
+
+Package: OpenTTD-OpenMSX
+Version: 14.1.0.7-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: OpenTTD
+Homepage: https://github.com/adyoull/riscos-openttd
+Description: Music for OpenTTD (OpenMSX)
+ The free OpenMSX music set for OpenTTD, with the SoundFont OpenTTD
+ plays it through. It goes into OpenTTD's application directory.
+Size: 5719443
+MD5Sum: 19a41db915bf4be77d32dcce5a35a631
+URL: https://adyoull.github.io/riscos-packages/packages/OpenTTD-OpenMSX_14.1.0.7-1.zip
+
+Package: OpenTTD-OpenSFX
+Version: 14.1.0.7-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: OpenTTD
+Homepage: https://github.com/adyoull/riscos-openttd
+Description: Sound effects for OpenTTD (OpenSFX)
+ The free OpenSFX sound set for OpenTTD. It goes into OpenTTD's
+ baseset directory.
+Size: 11553539
+MD5Sum: af418b1316753747fc13ebd5d209aa75
+URL: https://adyoull.github.io/riscos-packages/packages/OpenTTD-OpenSFX_14.1.0.7-1.zip
+
+Package: PCSX
+Version: 26.0.2-1
+Section: Emulation
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Emulation.!PCSX (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-pcsx
+Description: PlayStation emulator (PCSX ReARMed)
+ PCSX ReARMed with a native desktop frontend: full speed on a Pi 4
+ with its ARM recompiler and NEON renderer, a scalable window or full
+ screen, sound, keyboard and USB game pads, save states, memory cards
+ and a games library. Plays .cue/.bin, .chd, .pbp, .iso, CloneCD and
+ games inside .zip and .7z files. A built-in BIOS replacement runs most
+ games. Needs ARMv7 with NEON. Use only discs and BIOS images you own.
+ PlayStation is a trademark of Sony Interactive Entertainment; this
+ port isn't connected with Sony.
+Size: 789459
+MD5Sum: 3a1aad3b5859bfe7203c2308fdd92ea5
+URL: https://adyoull.github.io/riscos-packages/packages/PCSX_26.0.2-1.zip
+
+Package: PThreadTicker
+Version: 0.03.0.1-1
+Section: System
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm
+Homepage: https://github.com/adyoull/riscos-unixlib
+Description: Keeps threaded UnixLib programs safe in the desktop
+ The PThreadTicker module, from riscos-unixlib 5.0.3.3, installed in
+ !System. It runs UnixLib's thread switcher only when it's safe to.
+ Programs that need it load a copy from their own directory if this
+ one isn't there; a newer one in !System wins.
+Size: 2733
+MD5Sum: c9771adf2d7ae4f71cf485451af2cdf8
+URL: https://adyoull.github.io/riscos-packages/packages/PThreadTicker_0.03.0.1-1.zip
+
+Package: RDPServer
+Version: 0.2.0.1-1
+Section: Network
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, CryptRandom (>= 0.12)
+Components: Apps.Network.!RDPServer (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-rdpserver
+Description: Remote Desktop (RDP) server for the RISC OS desktop
+ Use this desktop from Windows Remote Desktop, Microsoft's Windows App,
+ FreeRDP or !RDPClient, with TLS 1.2, sound and logins. The server
+ runs as a module, so it keeps serving when the desktop isn't
+ multitasking.
+Size: 499574
+MD5Sum: da068e0cf674aa0549e5e48b42787d55
+URL: https://adyoull.github.io/riscos-packages/packages/RDPServer_0.2.0.1-1.zip
+
+Package: Reel
+Version: 0.1.29.0.1-1
+Section: Video
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Video.!Reel (Movable LookAt), Apps.Video.!ReelEGL (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-ffmpeg
+Description: Video player for the RISC OS desktop, built on FFmpeg
+ Plays MP4, MKV, WebM, AVI and more (H.264, HEVC, VP9, AV1), with
+ subtitles, chapters, playlists and a mini player, and web streams.
+ Uses VideoOverlay and the Pi's hardware decoders where it can.
+ !ReelEGL is the same player drawing through riscos-mesa's EGL.
+ Needs ARMv7 with NEON.
+Size: 28670999
+MD5Sum: 4ecea57eca7c316ccffad64b9ad4ce61
+URL: https://adyoull.github.io/riscos-packages/packages/Reel_0.1.29.0.1-1.zip
+
+Package: SoftMIDI
+Version: 0.5.0.0.1-1
+Section: Audio
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Homepage: https://github.com/adyoull/riscos-softmidi
+Description: General MIDI SoundFont and the *MIDIPlay player
+ A General MIDI SoundFont (TimGM6mb) shared by programs built with the
+ midisynth library, and *MIDIPlay to play .mid files through
+ SharedSoundBuffer or DigitalRenderer. It goes into !Boot.Resources.
+Size: 5813308
+MD5Sum: 173bd7757b15fc8d9ef089dd9b46d868
+URL: https://adyoull.github.io/riscos-packages/packages/SoftMIDI_0.5.0.0.1-1.zip
+
+Package: TORCS
+Version: 1.3.7.0.4-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!TORCS (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-torcs
+Description: The Open Racing Car Simulator, a 3D racing game
+ Software OpenGL racing (riscos-mesa) in a desktop window or full
+ screen, with nine tracks and Debian's free cars. About 10 frames a
+ second on a Pi 4; needs a fast ARMv7 machine with NEON and about
+ 64 MB free.
+Size: 77038528
+MD5Sum: fa4f8fdcdd3c9c5673404ad6fa0b116d
+URL: https://adyoull.github.io/riscos-packages/packages/TORCS_1.3.7.0.4-1.zip
+
+Package: TORCS-Tracks
+Version: 1.3.7.0.3-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: TORCS, TORCS-Tracks-DirtOval, TORCS-Tracks-Road1, TORCS-Tracks-Road2, TORCS-Tracks-Road3
+Homepage: https://github.com/adyoull/riscos-torcs
+Description: All 29 extra tracks for TORCS
+ Installs the four TORCS track packages, so all 38 tracks of Debian's
+ free-software TORCS 1.3.7 are there (the main package has 9). About
+ 310 MB to download, 400 MB on disc.
+Size: 5566
+MD5Sum: 33c42e79de7ce4259dad7ebe361b1eb9
+URL: https://adyoull.github.io/riscos-packages/packages/TORCS-Tracks_1.3.7.0.3-1.zip
+
+Package: TORCS-Tracks-DirtOval
+Version: 1.3.7.0.3-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: TORCS
+Homepage: https://github.com/adyoull/riscos-torcs
+Description: Dirt and oval tracks for TORCS
+ Tracks for TORCS 1.3.7: dirt-1, dirt-2, dirt-3, dirt-5, dirt-6,
+ mixed-1, c-speedway, d-speedway, e-speedway, e-track-5, f-speedway,
+ g-speedway, michigan. They go into TORCS's tracks directory and appear
+ in Configure Race. Install TORCS-Tracks to get all 29 extra tracks at
+ once.
+Size: 57860208
+MD5Sum: 598e2b6c307af810dd0bdf6b7e508ce3
+URL: https://adyoull.github.io/riscos-packages/packages/TORCS-Tracks-DirtOval_1.3.7.0.3-1.zip
+
+Package: TORCS-Tracks-Road1
+Version: 1.3.7.0.3-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: TORCS
+Homepage: https://github.com/adyoull/riscos-torcs
+Description: Road tracks for TORCS (E-Track 2, Ole Road 1, E-Track 6)
+ Tracks for TORCS 1.3.7: e-track-2, ole-road-1, e-track-6. They go into
+ TORCS's tracks directory and appear in Configure Race. Install TORCS-
+ Tracks to get all 29 extra tracks at once.
+Size: 84547903
+MD5Sum: e3ca7ea4f8530776d9691fc6ea9de172
+URL: https://adyoull.github.io/riscos-packages/packages/TORCS-Tracks-Road1_1.3.7.0.3-1.zip
+
+Package: TORCS-Tracks-Road2
+Version: 1.3.7.0.3-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: TORCS
+Homepage: https://github.com/adyoull/riscos-torcs
+Description: Road tracks for TORCS (Brondehach, Wheel 1 and 2, Alpine 2)
+ Tracks for TORCS 1.3.7: brondehach, wheel-1, wheel-2, alpine-2. They
+ go into TORCS's tracks directory and appear in Configure Race. Install
+ TORCS-Tracks to get all 29 extra tracks at once.
+Size: 84663283
+MD5Sum: 6bfaf01c6a497dc1e0879e2d51d5660c
+URL: https://adyoull.github.io/riscos-packages/packages/TORCS-Tracks-Road2_1.3.7.0.3-1.zip
+
+Package: TORCS-Tracks-Road3
+Version: 1.3.7.0.3-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: TORCS
+Homepage: https://github.com/adyoull/riscos-torcs
+Description: Road tracks for TORCS (Corkscrew, E-Track 3 and seven more)
+ Tracks for TORCS 1.3.7: corkscrew, e-track-3, ruudskogen, g-track-1,
+ street-1, alpine-1, g-track-3, eroad, spring. They go into TORCS's
+ tracks directory and appear in Configure Race. Install TORCS-Tracks to
+ get all 29 extra tracks at once.
+Size: 84662580
+MD5Sum: 36ca8d6de7c6325e59a4429eb83572fa
+URL: https://adyoull.github.io/riscos-packages/packages/TORCS-Tracks-Road3_1.3.7.0.3-1.zip
+
+Package: TTF-Noto-Color-Emoji
+Version: 2.051.0.1-1
+Section: Fonts
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: UnixFont, FontConfig
+Homepage: https://github.com/googlefonts/noto-emoji
+Description: Noto Color Emoji font for fontconfig programs
+ Google's colour emoji font, with the emoji of recent Unicode versions:
+ faces, people with their skin tones, families, flags. GTK programs
+ (ClawsMail, Gnumeric, Geany, L3afpad, mtPaint) and other fontconfig
+ programs show emoji with it, in colour, at the size of the text.
+ .
+ It is installed in UnixFont and found through FontConfig. It is not a
+ RISC OS outline font, so Font Manager programs can't use it.
+Size: 9913097
+MD5Sum: 0380c20ba6fb92fadad8c86acc6ee686
+URL: https://adyoull.github.io/riscos-packages/packages/TTF-Noto-Color-Emoji_2.051.0.1-1.zip
+
+Package: TubeSearch
+Version: 0.2.0~rc12.0.1-1
+Section: Video
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Reel (>= 0.1.27)
+Components: Apps.Video.!TubeSearch (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-tubesearch
+Description: Search and browse YouTube, and play videos in Reel
+ Shows YouTube search results, channels and related videos with their
+ pictures, and plays the video you click in Reel, using the Pi's
+ hardware decoder. It answers YouTube's challenges itself with QuickJS
+ and yt-dlp's solver scripts. Needs AcornSSL (RISC OS 5.28 or later)
+ and a 32K or 16M colour desktop. Not affiliated with YouTube or
+ Google.
+ .
+ This is a release candidate.
+Size: 1035896
+MD5Sum: 9ddc22eac04ea6860e4898f76d899584
+URL: https://adyoull.github.io/riscos-packages/packages/TubeSearch_0.2.0~rc12.0.1-1.zip
+
+Package: VCMI
+Version: 1.7.5.0.2-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Suggests: GOGImport
+Components: Apps.Games.!VCMI (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-vcmi
+Description: Open-source engine for Heroes of Might and Magic III
+ VCMI 1.7.5 plays Heroes of Might and Magic III (Shadow of Death and
+ Complete) in a desktop window or full screen. It needs the files from
+ your own copy of the game (GOG.com or CD); GOGImport gets them out of
+ the GOG installer. ARMv7 with VFP; a Raspberry Pi 4 is recommended.
+Size: 14846746
+MD5Sum: b7ced0a7456353f8a41209a18ac1a852
+URL: https://adyoull.github.io/riscos-packages/packages/VCMI_1.7.5.0.2-1.zip
+
+Package: Warzone2100
+Version: 2.3.9.0.14-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!Warzone2100 (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-warzone2100
+Description: Real-time strategy game (Warzone 2100 2.3.9)
+ 3D real-time strategy with software OpenGL, in a multitasking window
+ or full screen, with hardware overlay on the Pi. Campaign, skirmish
+ and the original music. ARMv7 with VFPv3.
+Size: 51914260
+MD5Sum: 1884c46f4b4ee4823b7507463718e865
+URL: https://adyoull.github.io/riscos-packages/packages/Warzone2100_2.3.9.0.14-1.zip
+
+Package: YSFlight
+Version: 0.0.1-1
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Games.!YSFlight (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-ysflight
+Description: Free flight simulator (YSFlight Community Edition)
+ Fly YSFlight's aircraft in a desktop window or full screen with
+ software OpenGL, sound and USB joysticks. About 22 frames a second
+ at 640x480 on a Pi 4. ARMv7 with VFP.
+Size: 17181154
+MD5Sum: 28344bd457e6aabb2dbc9829bd9d2c95
+URL: https://adyoull.github.io/riscos-packages/packages/YSFlight_0.0.1-1.zip
