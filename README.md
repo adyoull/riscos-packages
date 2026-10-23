@@ -17,7 +17,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | ClawsMail | 4.4.0.0.20-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.23-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
-| Folio | 0.0.1.0.58-1 | Reader for PDF and ebook files, built on MuPDF |
+| Folio | 0.0.1.0.60-1 | Reader for PDF and ebook files, built on MuPDF |
 | FolioCJK | 1.0.0.1-1 | Chinese, Japanese and Korean font for Folio |
 | FolioOCR | 1.0.0.1-1 | Text recognition (OCR) for Folio, English |
 | FolioSpeech | 1.0.0.1-1 | Reading aloud for Folio (British English voice) |
@@ -38,7 +38,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | RDPServer | 0.2.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
 | Reel | 0.1.29.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
 | SoftMIDI | 0.5.0.0.1-1 | General MIDI SoundFont and the *MIDIPlay player |
-| TORCS | 1.3.7.0.3-1 | The Open Racing Car Simulator, a 3D racing game |
+| TORCS | 1.3.7.0.4-1 | The Open Racing Car Simulator, a 3D racing game |
 | TORCS-Tracks | 1.3.7.0.3-1 | All 29 extra tracks for TORCS |
 | TORCS-Tracks-DirtOval | 1.3.7.0.3-1 | Dirt and oval tracks for TORCS |
 | TORCS-Tracks-Road1 | 1.3.7.0.3-1 | Road tracks for TORCS (E-Track 2, Ole Road 1, E-Track 6) |
@@ -47,7 +47,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | TTF-Noto-Color-Emoji | 2.051.0.1-1 | Noto Color Emoji font for fontconfig programs |
 | TubeSearch | 0.2.0~rc12.0.1-1 | Search and browse YouTube, and play videos in Reel |
 | VCMI | 1.7.5.0.2-1 | Open-source engine for Heroes of Might and Magic III |
-| Warzone2100 | 2.3.9.0.13-1 | Real-time strategy game (Warzone 2100 2.3.9) |
+| Warzone2100 | 2.3.9.0.14-1 | Real-time strategy game (Warzone 2100 2.3.9) |
 | YSFlight | 0.0.1-1 | Free flight simulator (YSFlight Community Edition) |
 
 ## Version numbers
