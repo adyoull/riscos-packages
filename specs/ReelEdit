@@ -1,0 +1,29 @@
+# Spec for tools/riscpkg.py: ReelEdit.
+Package: ReelEdit
+Section: Video
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Apps.Video.!ReelEdit (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-reeledit
+Description: Non-linear video editor, built on MLT and FFmpeg
+ Cut, trim, move, split and roll clips; fades and dissolves; sound
+ levels and audio tracks; logos, pictures and picture in picture;
+ titles in RISC OS fonts; slow, fast and reverse motion; render
+ previews and proxies; autosave. Exports MP4 (H.264 and AAC) with the
+ Pi's VideoCore encoder. Needs a Raspberry Pi 2, 3 or 4; gpu_mem=128
+ for 1080p. The User Guide is inside (F1).
+ .
+ This is a beta.
+Build-Map: !ReelEdit -> Apps/Video/!ReelEdit
+Build-Notice: ReelEdit, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-reeledit/releases
+ .
+ ReelEdit is free software under the GNU GPL version 2 or later. It
+ contains MLT, FFmpeg with x264, ReelHWAccel, libxml2 and others; as a
+ whole it is distributed under the GPL version 2. The licences, and
+ where each part's source is, follow.
+Build-Copyright: !ReelEdit/Licences
