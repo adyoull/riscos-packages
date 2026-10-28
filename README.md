@@ -14,21 +14,21 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | Package | Version | What it is |
 |---|---|---|
 | AddrSpace | 0.1.0.0.1-1 | Shows what is using RISC OS's logical address space |
-| ClawsMail | 4.4.0.0.20-1 | Claws Mail email client (GTK 3) |
+| ClawsMail | 4.4.0.0.21-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.23-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
-| Folio | 0.0.1.0.60-1 | Reader for PDF and ebook files, built on MuPDF |
+| Folio | 0.0.1.0.71-1 | Reader for PDF and ebook files, built on MuPDF |
 | FolioCJK | 1.0.0.1-1 | Chinese, Japanese and Korean font for Folio |
 | FolioOCR | 1.0.0.1-1 | Text recognition (OCR) for Folio, English |
 | FolioSpeech | 1.0.0.1-1 | Reading aloud for Folio (British English voice) |
 | Freeciv | 3.2.6.0.14-1 | Civilization-style turn-based strategy game (Freeciv 3.2.6) |
-| Geany | 2.1.0.9-1 | Geany programmer's editor (GTK 3) |
-| Gnumeric | 1.12.57.0.14-1 | Gnumeric spreadsheet (GTK 3) |
+| Geany | 2.1.0.10-1 | Geany programmer's editor (GTK 3) |
+| Gnumeric | 1.12.57.0.15-1 | Gnumeric spreadsheet (GTK 3) |
 | GOGImport | 1.0.0.1-1 | Gets Heroes III's files out of the GOG installer for VCMI |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
-| L3afpad | 0.8.18.1.11.0.30-1 | L3afpad simple text editor (GTK 3) |
+| L3afpad | 0.8.18.1.11.0.31-1 | L3afpad simple text editor (GTK 3) |
 | Matinee | 0.1.1.0.1-1 | Plex, Jellyfin and DLNA media client with a built-in player |
-| mtPaint | 3.50.14.0.9-1 | mtPaint painting program (GTK 3) |
+| mtPaint | 3.50.14.0.10-1 | mtPaint painting program (GTK 3) |
 | NetStats | 1.06.0.1-1 | Network statistics: traffic graphs, connections and LAN devices |
 | OpenTTD | 14.1.0.7-1 | Open-source transport simulation game (OpenTTD 14.1) |
 | OpenTTD-OpenMSX | 14.1.0.7-1 | Music for OpenTTD (OpenMSX) |
@@ -45,7 +45,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | TORCS-Tracks-Road2 | 1.3.7.0.3-1 | Road tracks for TORCS (Brondehach, Wheel 1 and 2, Alpine 2) |
 | TORCS-Tracks-Road3 | 1.3.7.0.3-1 | Road tracks for TORCS (Corkscrew, E-Track 3 and seven more) |
 | TTF-Noto-Color-Emoji | 2.051.0.1-1 | Noto Color Emoji font for fontconfig programs |
-| TubeSearch | 0.2.0~rc12.0.1-1 | Search and browse YouTube, and play videos in Reel |
+| TubeSearch | 0.2.0~rc13.0.1-1 | Search and browse YouTube, and play videos in Reel |
 | VCMI | 1.7.5.0.2-1 | Open-source engine for Heroes of Might and Magic III |
 | Warzone2100 | 2.3.9.0.14-1 | Real-time strategy game (Warzone 2100 2.3.9) |
 | YSFlight | 0.0.1-1 | Free flight simulator (YSFlight Community Edition) |

@@ -1,0 +1,37 @@
+# Spec for tools/riscpkg.py: AbiWord.
+Package: AbiWord
+Section: Text
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport, Iconv
+Recommends: TTF-Noto-Color-Emoji
+Components: Apps.Office.!AbiWord (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: AbiWord word processor (GTK 3)
+ The word processor: styles, tables, headers and footers, footnotes,
+ lists, pictures and page layout, with OpenDocument (.odt), Word (.doc,
+ .docx), RTF, HTML, text and AbiWord's own files. British English
+ spelling (more dictionaries in Choices), the desktop's own fonts, RISC
+ OS Save and Open boxes, Wimp menus and an icon bar icon; Word files
+ open from the Filer.
+ .
+ This is a public beta of the riscos-gtk ports.
+Build-Map: !AbiWord -> Apps/Office/!AbiWord
+Build-Notice: AbiWord, packaged for PackMan from the riscos-gtk release zip on
+ https://github.com/adyoull/riscos-gtk/releases
+ .
+ AbiWord is AbiWord 3.0.8 (www.abisource.com), under the GNU GPL version 2 or later, with wv (GPL). It is linked with GTK 3 and its
+ libraries, enchant and hunspell (LGPL), and includes LibreOffice's
+ British English dictionary (LGPL), DejaVu fonts and PThreadTicker. The
+ source is offered by the Source file in the application and on the
+ release page. Licences follow.
+Build-Copyright: !AbiWord/Licence
+Build-Copyright: !AbiWord/LicenceLGPL
+Build-Copyright: !AbiWord/share/hunspell/LicenceDictionary
+Build-Copyright: !AbiWord/PThreadTicker-Licence
+Build-Copyright: !AbiWord/fonts/Licence
+Build-Copyright: !AbiWord/share/mime/Licence
+Build-Copyright: !AbiWord/Source
