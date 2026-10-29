@@ -1,0 +1,26 @@
+# Spec for tools/riscpkg.py: PDFS (the MTP filing system module).
+Package: PDFS
+Section: Disc
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Homepage: https://github.com/adyoull/riscos-pdfs
+Description: Phones, tablets and cameras (MTP) as discs
+ PDFS, the Portable Device Filing System: an MTP device's storages
+ appear as discs on the icon bar, for the Filer, *Copy and every
+ program. The module goes into !Boot's PreDesk, so it's loaded at
+ start-up; RISC OS 5's USB stack is needed. A beta: back up a
+ device's data before using it with PDFS.
+Build-Map: PDFS/PDFS -> ToBeLoaded/PDFS
+Build-Map: PDFS/README.md -> Manuals/PDFS/README.md
+Build-Map: PDFS/Testing.md -> Manuals/PDFS/Testing.md
+Build-Map: PDFS/References.md -> Manuals/PDFS/References.md
+Build-Map: PDFS/CHANGELOG.md -> Manuals/PDFS/CHANGELOG.md
+Build-Notice: PDFS, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-pdfs/releases
+ .
+ PDFS is under the Apache License 2.0, which follows. It comes without
+ warranty of any kind and without liability (sections 7 and 8).
+Build-Copyright: PDFS/LICENSE
