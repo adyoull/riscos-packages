@@ -35,3 +35,6 @@ Build-Copyright: !AbiWord/PThreadTicker-Licence
 Build-Copyright: !AbiWord/fonts/Licence
 Build-Copyright: !AbiWord/share/mime/Licence
 Build-Copyright: !AbiWord/Source
+Build-Copyright: !AbiWord/LicenceGPL3
+Build-Copyright: !AbiWord/LicenceLGPL3
+Build-Copyright: !AbiWord/fonts/LicenceBaKoMa
