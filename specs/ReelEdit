@@ -10,14 +10,16 @@ Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
 Components: Apps.Video.!ReelEdit (Movable LookAt)
 Homepage: https://github.com/adyoull/riscos-reeledit
 Description: Non-linear video editor, built on MLT and FFmpeg
- Cut, trim, move, split and roll clips; fades and dissolves; sound
- levels and audio tracks; logos, pictures and picture in picture;
- titles in RISC OS fonts; slow, fast and reverse motion; render
- previews and proxies; autosave. Exports MP4 (H.264 and AAC) with the
- Pi's VideoCore encoder. Needs a Raspberry Pi 2, 3 or 4; gpu_mem=128
- for 1080p. The User Guide is inside (F1).
+ Cut, trim, move, split and roll clips; fades, dissolves and wipes; a
+ clip's colour and looks, pan and zoom, special effects, freeze frames
+ and countdowns; sound clean-up, levels, loudness and audio tracks;
+ logos, picture in picture (with keyframes), green screen and titles in
+ RISC OS fonts; slow, fast and reverse motion; render previews and
+ proxies; autosave. Exports MP4 (H.264 and AAC) with the Pi's VideoCore
+ encoder, typed as a video (&FB2). Needs a Raspberry Pi 2, 3 or 4;
+ gpu_mem=128 for 1080p. The User Guide is inside (F1).
  .
- This is a beta.
+ This is a beta (Beta 2).
 Build-Map: !ReelEdit -> Apps/Video/!ReelEdit
 Build-Notice: ReelEdit, packaged for PackMan from the release zip on
  https://github.com/adyoull/riscos-reeledit/releases
