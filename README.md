@@ -16,7 +16,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | AbiWord | 3.0.8.0.3-1 | AbiWord word processor (GTK 3) |
 | AddrSpace | 0.1.0.0.1-1 | Shows what is using RISC OS's logical address space |
 | ClawsMail | 4.4.0.0.24-1 | Claws Mail email client (GTK 3) |
-| FFmpeg | 5.1.10.0.23-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
+| FFmpeg | 5.1.10.0.24-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
 | Folio | 0.0.1.0.71-1 | Reader for PDF and ebook files, built on MuPDF |
 | FolioCJK | 1.0.0.1-1 | Chinese, Japanese and Korean font for Folio |
@@ -38,7 +38,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | PDFS | 0.15~beta.0.1-1 | Phones, tablets and cameras (MTP) as discs |
 | PThreadTicker | 0.03.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
 | RDPServer | 0.2.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
-| Reel | 0.1.29.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
+| Reel | 0.1.30.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
 | ReelEdit | 0.3~beta.2.0.1-1 | Non-linear video editor, built on MLT and FFmpeg |
 | SoftMIDI | 0.5.0.0.1-1 | General MIDI SoundFont and the *MIDIPlay player |
 | TORCS | 1.3.7.0.4-1 | The Open Racing Car Simulator, a 3D racing game |
