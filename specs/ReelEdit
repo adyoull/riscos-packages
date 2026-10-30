@@ -19,7 +19,7 @@ Description: Non-linear video editor, built on MLT and FFmpeg
  encoder, typed as a video (&FB2). Needs a Raspberry Pi 2, 3 or 4;
  gpu_mem=128 for 1080p. The User Guide is inside (F1).
  .
- This is a beta (Beta 2).
+ This is a beta (Beta 3).
 Build-Map: !ReelEdit -> Apps/Video/!ReelEdit
 Build-Notice: ReelEdit, packaged for PackMan from the release zip on
  https://github.com/adyoull/riscos-reeledit/releases
