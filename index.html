@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RISC OS packages</title>
+<style>
+:root { --bg:#fbfaf7; --fg:#1d1d1b; --mut:#6b6a66; --line:#e3e0d8; --acc:#1a5fc8; }
+@media (prefers-color-scheme: dark) {
+ :root { --bg:#18181a; --fg:#ebe9e4; --mut:#a3a19b; --line:#33322f; --acc:#80b4ff; } }
+body { background:var(--bg); color:var(--fg); font:16px/1.5 system-ui,sans-serif;
+  max-width:52rem; margin:0 auto; padding:2rem 16px; }
+h1 { font-size:1.6rem; margin:0 0 .25rem } p.sub { color:var(--mut); margin:0 0 2rem }
+code { font:0.9em ui-monospace,monospace; background:var(--line); padding:.1em .35em;
+  border-radius:4px; overflow-wrap:anywhere }
+table { width:100%; border-collapse:collapse; margin-top:1rem }
+th,td { text-align:left; padding:.5rem .4rem; border-bottom:1px solid var(--line);
+  vertical-align:top }
+th { color:var(--mut); font-weight:500; font-size:.85rem }
+td.v { font-variant-numeric:tabular-nums; white-space:nowrap }
+a { color:var(--acc) }
+</style></head><body>
+<h1>RISC OS packages</h1>
+<p class="sub">Ports and applications by Andrew Youll, for PackMan.</p>
+<h2>Adding this source to PackMan</h2>
+<p>In PackMan, choose <b>Sources&hellip;</b> from the icon bar menu, add</p>
+<p><code>https://adyoull.github.io/riscos-packages/pkg/index</code></p>
+<p>then choose <b>Update lists</b>. The packages below then show in PackMan
+with the rest.</p>
+<h2>Packages</h2>
+<table><tr><th>Package</th><th>Version</th><th>Description</th><th>Size</th></tr>
+<tr><td>AbiWord</td><td class=v>3.0.8.0.3-1</td><td>AbiWord word processor (GTK 3)</td><td class=v>16.9 MB</td></tr>
+<tr><td>AddrSpace</td><td class=v>0.1.0.0.1-1</td><td>Shows what is using RISC OS's logical address space</td><td class=v>0.1 MB</td></tr>
+<tr><td>ClawsMail</td><td class=v>4.4.0.0.24-1</td><td>Claws Mail email client (GTK 3)</td><td class=v>13.2 MB</td></tr>
+<tr><td>FFmpeg</td><td class=v>5.1.10.0.24-1</td><td>FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON</td><td class=v>43.2 MB</td></tr>
+<tr><td>fheroes2</td><td class=v>1.1.17.0.5-1</td><td>Free re-creation of the Heroes of Might and Magic II engine</td><td class=v>14.4 MB</td></tr>
+<tr><td>Folio</td><td class=v>0.0.1.0.71-1</td><td>Reader for PDF and ebook files, built on MuPDF</td><td class=v>13.2 MB</td></tr>
+<tr><td>FolioCJK</td><td class=v>1.0.0.1-1</td><td>Chinese, Japanese and Korean font for Folio</td><td class=v>2.4 MB</td></tr>
+<tr><td>FolioOCR</td><td class=v>1.0.0.1-1</td><td>Text recognition (OCR) for Folio, English</td><td class=v>4.9 MB</td></tr>
+<tr><td>FolioSpeech</td><td class=v>1.0.0.1-1</td><td>Reading aloud for Folio (British English voice)</td><td class=v>29.7 MB</td></tr>
+<tr><td>Freeciv</td><td class=v>3.2.6.0.14-1</td><td>Civilization-style turn-based strategy game (Freeciv 3.2.6)</td><td class=v>23.2 MB</td></tr>
+<tr><td>Geany</td><td class=v>2.1.0.12-1</td><td>Geany programmer's editor (GTK 3)</td><td class=v>12.1 MB</td></tr>
+<tr><td>Gnumeric</td><td class=v>1.12.57.0.17-1</td><td>Gnumeric spreadsheet (GTK 3)</td><td class=v>16.7 MB</td></tr>
+<tr><td>GOGImport</td><td class=v>1.0.0.1-1</td><td>Gets Heroes III's files out of the GOG installer for VCMI</td><td class=v>0.8 MB</td></tr>
+<tr><td>Julius</td><td class=v>1.8.0.0.1-1</td><td>Open-source engine for Caesar III, the Roman city-building game</td><td class=v>4.0 MB</td></tr>
+<tr><td>L3afpad</td><td class=v>0.8.18.1.11.0.33-1</td><td>L3afpad simple text editor (GTK 3)</td><td class=v>9.3 MB</td></tr>
+<tr><td>Matinee</td><td class=v>0.1.1.0.1-1</td><td>Plex, Jellyfin and DLNA media client with a built-in player</td><td class=v>11.6 MB</td></tr>
+<tr><td>mtPaint</td><td class=v>3.50.14.0.12-1</td><td>mtPaint painting program (GTK 3)</td><td class=v>9.3 MB</td></tr>
+<tr><td>NetStats</td><td class=v>1.06.0.1-1</td><td>Network statistics: traffic graphs, connections and LAN devices</td><td class=v>0.4 MB</td></tr>
+<tr><td>OpenTTD</td><td class=v>14.1.0.7-1</td><td>Open-source transport simulation game (OpenTTD 14.1)</td><td class=v>18.2 MB</td></tr>
+<tr><td>OpenTTD-OpenMSX</td><td class=v>14.1.0.7-1</td><td>Music for OpenTTD (OpenMSX)</td><td class=v>5.7 MB</td></tr>
+<tr><td>OpenTTD-OpenSFX</td><td class=v>14.1.0.7-1</td><td>Sound effects for OpenTTD (OpenSFX)</td><td class=v>11.6 MB</td></tr>
+<tr><td>PCSX</td><td class=v>26.0.2-1</td><td>PlayStation emulator (PCSX ReARMed)</td><td class=v>0.8 MB</td></tr>
+<tr><td>PDFS</td><td class=v>0.16~beta.0.1-1</td><td>Phones, tablets and cameras (MTP) as discs</td><td class=v>0.1 MB</td></tr>
+<tr><td>PThreadTicker</td><td class=v>0.03.0.1-1</td><td>Keeps threaded UnixLib programs safe in the desktop</td><td class=v>0.0 MB</td></tr>
+<tr><td>RDPServer</td><td class=v>0.2.0.1-1</td><td>Remote Desktop (RDP) server for the RISC OS desktop</td><td class=v>0.5 MB</td></tr>
+<tr><td>Reel</td><td class=v>0.1.31.0.1-1</td><td>Video player for the RISC OS desktop, built on FFmpeg</td><td class=v>28.7 MB</td></tr>
+<tr><td>ReelEdit</td><td class=v>0.3~beta.3.0.1-1</td><td>Non-linear video editor, built on MLT and FFmpeg</td><td class=v>16.2 MB</td></tr>
+<tr><td>SoftMIDI</td><td class=v>0.5.0.0.1-1</td><td>General MIDI SoundFont and the *MIDIPlay player</td><td class=v>5.8 MB</td></tr>
+<tr><td>TORCS</td><td class=v>1.3.7.0.4-1</td><td>The Open Racing Car Simulator, a 3D racing game</td><td class=v>77.0 MB</td></tr>
+<tr><td>TORCS-Tracks</td><td class=v>1.3.7.0.3-1</td><td>All 29 extra tracks for TORCS</td><td class=v>0.0 MB</td></tr>
+<tr><td>TORCS-Tracks-DirtOval</td><td class=v>1.3.7.0.3-1</td><td>Dirt and oval tracks for TORCS</td><td class=v>57.9 MB</td></tr>
+<tr><td>TORCS-Tracks-Road1</td><td class=v>1.3.7.0.3-1</td><td>Road tracks for TORCS (E-Track 2, Ole Road 1, E-Track 6)</td><td class=v>84.5 MB</td></tr>
+<tr><td>TORCS-Tracks-Road2</td><td class=v>1.3.7.0.3-1</td><td>Road tracks for TORCS (Brondehach, Wheel 1 and 2, Alpine 2)</td><td class=v>84.7 MB</td></tr>
+<tr><td>TORCS-Tracks-Road3</td><td class=v>1.3.7.0.3-1</td><td>Road tracks for TORCS (Corkscrew, E-Track 3 and seven more)</td><td class=v>84.7 MB</td></tr>
+<tr><td>TTF-Noto-Color-Emoji</td><td class=v>2.051.0.1-1</td><td>Noto Color Emoji font for fontconfig programs</td><td class=v>9.9 MB</td></tr>
+<tr><td>TubeSearch</td><td class=v>0.2.0~rc14.0.1-1</td><td>Search and browse YouTube, and play videos in Reel</td><td class=v>1.1 MB</td></tr>
+<tr><td>VCMI</td><td class=v>1.7.5.0.2-1</td><td>Open-source engine for Heroes of Might and Magic III</td><td class=v>14.8 MB</td></tr>
+<tr><td>Warzone2100</td><td class=v>2.3.9.0.14-1</td><td>Real-time strategy game (Warzone 2100 2.3.9)</td><td class=v>51.9 MB</td></tr>
+<tr><td>YSFlight</td><td class=v>0.0.1-1</td><td>Free flight simulator (YSFlight Community Edition)</td><td class=v>17.2 MB</td></tr>
+</table>
+</body></html>
