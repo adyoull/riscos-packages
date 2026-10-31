@@ -35,7 +35,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | OpenTTD-OpenMSX | 14.1.0.7-1 | Music for OpenTTD (OpenMSX) |
 | OpenTTD-OpenSFX | 14.1.0.7-1 | Sound effects for OpenTTD (OpenSFX) |
 | PCSX | 26.0.2-1 | PlayStation emulator (PCSX ReARMed) |
-| PDFS | 0.15~beta.0.1-1 | Phones, tablets and cameras (MTP) as discs |
+| PDFS | 0.16~beta.0.1-1 | Phones, tablets and cameras (MTP) as discs |
 | PThreadTicker | 0.03.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
 | RDPServer | 0.2.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
 | Reel | 0.1.31.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
