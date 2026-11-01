@@ -26,6 +26,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | Geany | 2.1.0.12-1 | Geany programmer's editor (GTK 3) |
 | Gnumeric | 1.12.57.0.17-1 | Gnumeric spreadsheet (GTK 3) |
 | GOGImport | 1.0.0.1-1 | Gets Heroes III's files out of the GOG installer for VCMI |
+| Groove | 0.2.0.1-1 | Music studio: loops, drums, piano roll, recording |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
 | L3afpad | 0.8.18.1.11.0.33-1 | L3afpad simple text editor (GTK 3) |
 | Matinee | 0.1.1.0.1-1 | Plex, Jellyfin and DLNA media client with a built-in player |
