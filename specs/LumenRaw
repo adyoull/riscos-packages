@@ -1,0 +1,22 @@
+# Spec for tools/riscpkg.py: the camera raw plug-in for Lumen.
+Package: LumenRaw
+Section: Graphics
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: Lumen
+Homepage: https://github.com/adyoull/riscos-lumen
+Description: Camera raw files in Lumen (LibRaw 0.22.3)
+ The LumenRaw plug-in lets Lumen open camera raw files from over a
+ thousand cameras, using LibRaw 0.22.3. It goes into Lumen's Plugins
+ directory, with its own guide.
+Build-Map: !Lumen/Plugins/LibRaw -> Apps/Graphics/!Lumen/Plugins/LibRaw
+Build-Notice: LumenRaw, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-lumen/releases
+ .
+ LumenRaw's own code is under the MIT licence. It is linked with LibRaw
+ 0.22.3, under the GNU LGPL version 2.1; LibRaw's source is on the
+ release page (LibRaw-0.22.3-source.zip). The notices follow.
+Build-Copyright: !Lumen/Plugins/LibRaw/Licence

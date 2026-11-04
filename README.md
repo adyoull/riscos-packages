@@ -29,6 +29,8 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | Groove | 0.2.3.0.1-1 | Music studio: loops, drums, piano roll, recording |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
 | L3afpad | 0.8.18.1.11.0.34-1 | L3afpad simple text editor (GTK 3) |
+| Lumen | 0.0.36.0.1-1 | Photo library and non-destructive photo editor |
+| LumenRaw | 1.1.0.1-1 | Camera raw files in Lumen (LibRaw 0.22.3) |
 | Matinee | 0.1.1.0.1-1 | Plex, Jellyfin and DLNA media client with a built-in player |
 | mtPaint | 3.50.14.0.13-1 | mtPaint painting program (GTK 3) |
 | NetStats | 1.06.0.1-1 | Network statistics: traffic graphs, connections and LAN devices |

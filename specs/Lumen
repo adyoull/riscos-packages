@@ -1,0 +1,28 @@
+# Spec for tools/riscpkg.py: Lumen.
+Package: Lumen
+Section: Graphics
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Suggests: LumenRaw
+Components: Apps.Graphics.!Lumen (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-lumen
+Description: Photo library and non-destructive photo editor
+ A library of your photos (projects, albums, smart albums, stacks),
+ with stars, flags, labels, captions and keywords; a viewer with loupe,
+ split view and full screen; adjustments in 16-bit linear light without
+ changing the file (white balance, exposure, curves, colour, noise
+ reduction, sharpening, crop, retouching and more), presets and styles;
+ export to JPEG or PNG, and printing. Camera raw files with the
+ LumenRaw plug-in. Needs RISC OS 5.30 or later; built for the Pi 4.
+Build-Map: !Lumen -> Apps/Graphics/!Lumen
+Build-Notice: Lumen, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-lumen/releases
+ .
+ Lumen is free software; it includes SQLite, libjpeg, libpng, zlib,
+ UnixLib and GCC's runtime, each under its own licence. The licences
+ follow.
+Build-Copyright: !Lumen/Licences
