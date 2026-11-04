@@ -7,7 +7,7 @@ Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32, vfpv3
 Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
-Suggests: LumenRaw
+Suggests: LumenRaw, LumenHEIF
 Components: Apps.Graphics.!Lumen (Movable LookAt)
 Homepage: https://github.com/adyoull/riscos-lumen
 Description: Photo library and non-destructive photo editor
@@ -17,7 +17,8 @@ Description: Photo library and non-destructive photo editor
  changing the file (white balance, exposure, curves, colour, noise
  reduction, sharpening, crop, retouching and more), presets and styles;
  export to JPEG or PNG, and printing. Camera raw files with the
- LumenRaw plug-in. Needs RISC OS 5.30 or later; built for the Pi 4.
+ LumenRaw plug-in, and HEIF and AVIF photos with LumenHEIF. Needs
+ RISC OS 5.30 or later; built for the Pi 4.
 Build-Map: !Lumen -> Apps/Graphics/!Lumen
 Build-Notice: Lumen, packaged for PackMan from the release zip on
  https://github.com/adyoull/riscos-lumen/releases

@@ -1,0 +1,26 @@
+# Spec for tools/riscpkg.py: the HEIF and AVIF plug-in for Lumen.
+Package: LumenHEIF
+Section: Graphics
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: Lumen (>= 0.0.37)
+Homepage: https://github.com/adyoull/riscos-lumen
+Description: HEIF and AVIF photos in Lumen
+ The LumenHEIF plug-in lets Lumen open HEIF photos (.heic, .heif, .hif),
+ as iPhones and many other phones and cameras save them, and AVIF photos
+ (.avif). It reads 8, 10 and 12-bit and tiled photos, and turns Display
+ P3 into sRGB. Built on libheif 1.23.7, FFmpeg's HEVC decoder and dav1d.
+ Decoding a 12 MP photo needs about 100 MB of free memory. It goes into
+ Lumen's Plugins directory, with its own guide.
+Build-Map: !Lumen/Plugins/HEIF -> Apps/Graphics/!Lumen/Plugins/HEIF
+Build-Notice: LumenHEIF, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-lumen/releases
+ .
+ LumenHEIF's own code is under the MIT licence. It is linked with
+ libheif (GNU LGPL 3), FFmpeg's HEVC decoder (GNU LGPL 2.1 or later) and
+ dav1d (BSD 2-clause); their sources and the RISC OS changes are on the
+ release page (LumenHEIF-1.1-sources.zip). The notices follow.
+Build-Copyright: !Lumen/Plugins/HEIF/Licence
