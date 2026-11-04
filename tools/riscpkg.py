@@ -709,6 +709,18 @@ def index(args):
     keep, records, rows, pointer = set(), [], [], []
     total = 0
     owner = {}
+    # Packages listed in `external` are served from a GitHub release of this
+    # repository instead of the Pages site ("Package tag" per line), to keep
+    # the site under GitHub Pages' 1 GB. publish.sh uploads them.
+    external = {}
+    ext_file = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                            "external")
+    if os.path.exists(ext_file):
+        for line in open(ext_file, encoding="utf-8"):
+            line = line.split("#", 1)[0].split()
+            if len(line) == 2:
+                external[line[0]] = line[1]
+    uploads = []
     for name in sorted(pool, key=str.lower):
         version, path = pool[name][-1]
         rec, errs, warns = check_zip(path)
@@ -723,20 +735,28 @@ def index(args):
                                "to install the second" % (n, owner[n], name))
                 owner[n] = name
         leaf = os.path.basename(path)
-        keep.add(leaf)
-        dst = os.path.join(pkgdir, leaf)
-        if not (os.path.exists(dst) and os.path.getsize(dst) == os.path.getsize(path)
-                and _md5(dst) == _md5(path)):
-            shutil.copyfile(path, dst)
         size = os.path.getsize(path)
-        if size > MAX_FILE:
-            raise Fail("%s is %.1f MB; GitHub Pages won't serve a file over "
-                       "100 MB" % (leaf, size / 1e6))
-        total += size
+        if name in external:
+            if not re.match(r"^[A-Za-z0-9._+-]+$", leaf):
+                raise Fail("%s: GitHub renames release files with characters like "
+                           "'~'; keep this package on the site" % leaf)
+            url = args.release_base.rstrip("/") + "/" + external[name] + "/" + leaf
+            uploads.append("%s\t%s" % (external[name], os.path.abspath(path)))
+        else:
+            keep.add(leaf)
+            dst = os.path.join(pkgdir, leaf)
+            if not (os.path.exists(dst) and os.path.getsize(dst) == size
+                    and _md5(dst) == _md5(path)):
+                shutil.copyfile(path, dst)
+            if size > MAX_FILE:
+                raise Fail("%s is %.1f MB; GitHub Pages won't serve a file over "
+                           "100 MB" % (leaf, size / 1e6))
+            total += size
+            url = base + "packages/" + leaf
         fields = list(rec) + [("Size", str(size)), ("MD5Sum", _md5(path)),
-                              ("URL", base + "packages/" + leaf)]
+                              ("URL", url)]
         records.append(format_record(fields))
-        pointer.append(base + "packages/" + leaf)
+        pointer.append(url)
         desc = get(rec, "Description", "").split("\n", 1)[0]
         rows.append("<tr><td>%s</td><td class=v>%s</td><td>%s</td><td class=v>%s</td></tr>"
                     % (esc(name), esc(version), esc(desc), "%.1f MB" % (size / 1e6)))
@@ -754,9 +774,11 @@ def index(args):
     _write(os.path.join(site, ".nojekyll"), "")
     _write(os.path.join(site, "index.html"),
            HTML.format(index_url=esc(base + "pkg/index"), rows="\n".join(rows)))
+    _write(os.path.join(os.path.dirname(os.path.abspath(site)), ".uploads"),
+           "".join(u + "\n" for u in uploads))
     update_readme(records)
-    print("index: %d package(s), %.0f MB; PackMan source %spkg/index"
-          % (len(records), total / 1e6, base))
+    print("index: %d package(s), %.0f MB on the site, %d from GitHub releases; "
+          "PackMan source %spkg/index" % (len(records), total / 1e6, len(uploads), base))
     if total > SITE_WARN:
         print("warning: the site is %.0f MB; GitHub Pages sites should stay "
               "under 1 GB" % (total / 1e6))
@@ -814,6 +836,8 @@ def main():
     i.add_argument("--pool", default=os.path.join(here, "pool"))
     i.add_argument("--site", default=os.path.join(here, "site"))
     i.add_argument("--base", default="https://adyoull.github.io/riscos-packages/")
+    i.add_argument("--release-base",
+                   default="https://github.com/adyoull/riscos-packages/releases/download/")
     im = sub.add_parser("import")
     im.add_argument("zip")
     im.add_argument("--pool", default=os.path.join(here, "pool"))
