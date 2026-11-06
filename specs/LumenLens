@@ -1,0 +1,27 @@
+# Spec for tools/riscpkg.py: the lens profiles plug-in for Lumen.
+Package: LumenLens
+Section: Graphics
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: any
+Depends: Lumen (>= 0.0.38)
+Homepage: https://github.com/adyoull/riscos-lumen
+Description: Lens profiles for Lumen's Lens Correction
+ The LumenLens plug-in gives Lumen's Lens Correction the profiles of
+ 1,533 lenses from the lensfun project's database, so Lumen can undo a
+ lens's distortion, colour fringing and vignetting for the photo's focal
+ length and aperture. Auto finds the lens from what the camera wrote in
+ the file. It is only data, and goes into Lumen's Plugins directory,
+ with its own guide.
+Build-Map: !Lumen/Plugins/Lens -> Apps/Graphics/!Lumen/Plugins/Lens
+Build-Notice: LumenLens, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-lumen/releases
+ .
+ The lens data is from the lensfun database (https://lensfun.github.io),
+ by the lensfun contributors, under the Creative Commons
+ Attribution-ShareAlike 3.0 licence, and is shared under the same
+ licence. The plug-in's own text is under the MIT licence. The notices
+ follow.
+Build-Copyright: !Lumen/Plugins/Lens/Licence

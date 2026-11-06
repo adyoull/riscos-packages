@@ -22,5 +22,5 @@ Build-Notice: LumenHEIF, packaged for PackMan from the release zip on
  LumenHEIF's own code is under the MIT licence. It is linked with
  libheif (GNU LGPL 3), FFmpeg's HEVC decoder (GNU LGPL 2.1 or later) and
  dav1d (BSD 2-clause); their sources and the RISC OS changes are on the
- release page (LumenHEIF-1.1-sources.zip). The notices follow.
+ release page (LumenHEIF-1.2-sources.zip). The notices follow.
 Build-Copyright: !Lumen/Plugins/HEIF/Licence
