@@ -18,7 +18,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | ClawsMail | 4.4.0.0.25-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.24-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
-| Folio | 0.0.1.0.71-1 | Reader for PDF and ebook files, built on MuPDF |
+| Folio | 0.0.1.0.72-1 | Reader for PDF and ebook files, built on MuPDF |
 | FolioCJK | 1.0.0.1-1 | Chinese, Japanese and Korean font for Folio |
 | FolioOCR | 1.0.0.1-1 | Text recognition (OCR) for Folio, English |
 | FolioSpeech | 1.0.0.1-1 | Reading aloud for Folio (British English voice) |
@@ -40,7 +40,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | OpenTTD-OpenMSX | 14.1.0.7-1 | Music for OpenTTD (OpenMSX) |
 | OpenTTD-OpenSFX | 14.1.0.7-1 | Sound effects for OpenTTD (OpenSFX) |
 | PCSX | 26.0.2-1 | PlayStation emulator (PCSX ReARMed) |
-| PDFS | 0.16.3~beta.0.1-1 | Phones, tablets and cameras (MTP) as discs |
+| PDFS | 0.16.3.0.1-1 | Phones, tablets and cameras (MTP) as discs |
 | PThreadTicker | 0.03.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
 | RDPServer | 0.2.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
 | Reel | 0.1.31.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
