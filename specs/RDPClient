@@ -1,0 +1,46 @@
+# Spec for tools/riscpkg.py: RDPClient.
+Package: RDPClient
+Section: Network
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32
+Components: Apps.Network.!RDPClient (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-rdpclient
+Description: Remote Desktop (RDP) client, a port of rdesktop 1.6.0
+ Use a Windows PC, or any RDP server such as xrdp, from the RISC OS
+ desktop: a connection manager, TLS 1.2 and 1.3 (with AcornSSL), the
+ scroll wheel, two-way clipboard and sound. Andrew Sellors' port of
+ rdesktop, rebuilt 32-bit for RISC OS 5. Network Level Authentication
+ isn't supported, so turn it off on the server. The DeepKeys module it
+ needs is installed into !Boot's PreDesk.
+Build-Map: !RDPClient/_stale -> -
+Build-Map: !RDPClient -> Apps/Network/!RDPClient
+Build-Map: DeepKeys/!!DeepKeys -> ToBeLoaded/!!DeepKeys
+Build-Map: ReadFirst -> Manuals/RDPClient/ReadFirst
+Build-Map: History -> Manuals/RDPClient/History
+Build-Map: ConnectEx -> Manuals/RDPClient/ConnectEx
+Build-Map: Licence -> Manuals/RDPClient/Licence
+Build-Map: OpenSSL-Licence -> Manuals/RDPClient/OpenSSL-Licence
+Build-Map: DeepKeys/DeepK_Help -> Manuals/RDPClient/DeepK_Help
+Build-Notice: RDPClient, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-rdpclient/releases
+ .
+ !RDPClient is a port of rdesktop 1.6.0 by Andrew Sellors; the 32-bit
+ rebuild and later changes are (C) 2026 Andrew Youll. It is under the
+ GNU GPL version 3 or later, with an exception for linking with OpenSSL,
+ and is statically linked with OpenSSL 0.9.7c:
+ .
+ This product includes software developed by the OpenSSL Project for
+ use in the OpenSSL Toolkit. (http://www.openssl.org/)
+ This product includes cryptographic software written by Eric Young
+ (eay@cryptsoft.com).
+ .
+ DeepKeys (C) Cerilica Ltd 1999-2003  Contact: <simon@cerilica.com>
+ .
+ The GPL, the OpenSSL and SSLeay licences and the DeepKeys
+ documentation follow.
+Build-Copyright: Licence
+Build-Copyright: OpenSSL-Licence
+Build-Copyright: DeepKeys/DeepK_Help

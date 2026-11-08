@@ -29,7 +29,8 @@ A SPEC is a RiscPkg control record (the fields that go into RiscPkg/Control,
 without Version) plus build fields starting "Build-":
 
   Build-Map: <path in release zip> -> <path in package zip> (one or more;
-             zip paths with '/', e.g. !Folio -> Apps/Document/!Folio)
+             zip paths with '/', e.g. !Folio -> Apps/Document/!Folio;
+             the first that matches wins, and "-> -" leaves a path out)
   Build-Copyright: <file or directory in release zip>     (one or more)
       or <other.zip>::<file>, a zip in the same directory as the release zip
   Build-Meta: yes      a package with no files, that only depends on others
@@ -475,11 +476,16 @@ def build(args):
         out_entries, dropped = [], []
         for info in infos:
             n = info.filename
-            dest = None
+            dest, skip = None, False
             for s, d in maps:
                 if n.rstrip("/") == s or n.startswith(s + "/"):
-                    dest = d + n[len(s):]
+                    if d == "-":
+                        skip = True
+                    else:
+                        dest = d + n[len(s):]
                     break
+            if skip:
+                continue
             if dest is None:
                 if not info.is_dir():
                     dropped.append(n)

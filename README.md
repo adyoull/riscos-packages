@@ -42,6 +42,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | PCSX | 26.0.2-1 | PlayStation emulator (PCSX ReARMed) |
 | PDFS | 0.16.3.0.1-1 | Phones, tablets and cameras (MTP) as discs |
 | PThreadTicker | 0.03.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
+| RDPClient | 0.93.4.0.1-1 | Remote Desktop (RDP) client, a port of rdesktop 1.6.0 |
 | RDPServer | 0.2.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
 | Reel | 0.1.31.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
 | ReelEdit | 0.3~beta.3.0.1-1 | Non-linear video editor, built on MLT and FFmpeg |
