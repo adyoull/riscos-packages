@@ -15,8 +15,9 @@ Description: AbiWord word processor (GTK 3)
  lists, pictures and page layout, with OpenDocument (.odt), Word (.doc,
  .docx), RTF, HTML, text and AbiWord's own files. British English
  spelling (more dictionaries in Choices), the desktop's own fonts, RISC
- OS Save and Open boxes, Wimp menus and an icon bar icon; Word files
- open from the Filer.
+ OS Save and Open boxes, Wimp menus and an icon bar icon. Word (.docx,
+ .doc), OpenDocument (.odt) and RTF files get their own icons and open
+ from the Filer with a double-click.
  .
  This is a public beta of the riscos-gtk ports.
 Build-Map: !AbiWord -> Apps/Office/!AbiWord

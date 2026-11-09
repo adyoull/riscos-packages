@@ -12,17 +12,19 @@ Components: Apps.Audio.!Groove (Movable LookAt)
 Homepage: https://github.com/adyoull/riscos-groove
 Description: Music studio: loops, drums, piano roll, recording
  Drag loops into a song, play instruments from the computer keyboard,
- draw beats in a step grid and notes in a piano roll, record what you
- play, mix up to 16 tracks and export a WAV. MIDI import and export,
- and Maestro files play as Maestro plays them. With SoftMIDI, any track
- can use a SoundFont's General MIDI instruments and drum kits. A User
- guide with pictures is on the icon bar menu.
+ draw beats in a step grid and notes in a piano roll, with a lane for
+ controllers and pitch bend; record what you play, mix up to 32 tracks
+ and export a WAV. MIDI import and export, MIDI out with a channel and
+ program for each track, and Maestro files play as Maestro plays them.
+ With SoftMIDI, any track can use a SoundFont's General MIDI
+ instruments and drum kits. A User guide with pictures is on the icon
+ bar menu.
 Build-Map: !Groove -> Apps/Audio/!Groove
 Build-Notice: Groove, packaged for PackMan from the release zip on
  https://github.com/adyoull/riscos-groove/releases
  .
  Groove is under the MIT licence. It links SoftMIDI's libmidisynth and
  TinySoundFont (MIT), stb_vorbis (MIT or public domain) and UnixLib
- (parts under the LGPL; the repository at tag v0.2 is the source to
+ (parts under the LGPL; the repository at tag v0.3 is the source to
  rebuild Groove with). The notices follow.
 Build-Copyright: !Groove/Licences

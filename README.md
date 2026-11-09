@@ -13,9 +13,9 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 
 | Package | Version | What it is |
 |---|---|---|
-| AbiWord | 3.0.8.0.4-1 | AbiWord word processor (GTK 3) |
+| AbiWord | 3.0.8.0.5-1 | AbiWord word processor (GTK 3) |
 | AddrSpace | 0.1.0.0.1-1 | Shows what is using RISC OS's logical address space |
-| ClawsMail | 4.4.0.0.25-1 | Claws Mail email client (GTK 3) |
+| ClawsMail | 4.4.0.0.26-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.24-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
 | Folio | 0.0.1.0.72-1 | Reader for PDF and ebook files, built on MuPDF |
@@ -23,18 +23,18 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | FolioOCR | 1.0.0.1-1 | Text recognition (OCR) for Folio, English |
 | FolioSpeech | 1.0.0.1-1 | Reading aloud for Folio (British English voice) |
 | Freeciv | 3.2.6.0.14-1 | Civilization-style turn-based strategy game (Freeciv 3.2.6) |
-| Geany | 2.1.0.13-1 | Geany programmer's editor (GTK 3) |
-| Gnumeric | 1.12.62.0.18-1 | Gnumeric spreadsheet (GTK 3) |
+| Geany | 2.1.0.14-1 | Geany programmer's editor (GTK 3) |
+| Gnumeric | 1.12.62.0.19-1 | Gnumeric spreadsheet (GTK 3) |
 | GOGImport | 1.0.0.1-1 | Gets Heroes III's files out of the GOG installer for VCMI |
-| Groove | 0.2.3.0.1-1 | Music studio: loops, drums, piano roll, recording |
+| Groove | 0.3.0.1-1 | Music studio: loops, drums, piano roll, recording |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
-| L3afpad | 0.8.18.1.11.0.34-1 | L3afpad simple text editor (GTK 3) |
-| Lumen | 0.0.38.2.0.1-1 | Photo library and non-destructive photo editor |
-| LumenHEIF | 1.2.0.1-1 | HEIF and AVIF photos in Lumen |
+| L3afpad | 0.8.18.1.11.0.35-1 | L3afpad simple text editor (GTK 3) |
+| Lumen | 0.0.38.7.0.1-1 | Photo library and non-destructive photo editor |
+| LumenHEIF | 1.3.0.1-1 | HEIF and AVIF photos in Lumen |
 | LumenLens | 1.0.0.1-1 | Lens profiles for Lumen's Lens Correction |
-| LumenRaw | 1.3.0.1-1 | Camera raw files in Lumen (LibRaw 0.22.3) |
+| LumenRaw | 1.4.0.1-1 | Camera raw files in Lumen (LibRaw 0.22.3) |
 | Matinee | 0.1.1.0.1-1 | Plex, Jellyfin and DLNA media client with a built-in player |
-| mtPaint | 3.50.14.0.13-1 | mtPaint painting program (GTK 3) |
+| mtPaint | 3.50.14.0.14-1 | mtPaint painting program (GTK 3) |
 | NetStats | 1.06.0.1-1 | Network statistics: traffic graphs, connections and LAN devices |
 | OpenTTD | 14.1.0.8-1 | Open-source transport simulation game (OpenTTD 14.1) |
 | OpenTTD-OpenMSX | 14.1.0.7-1 | Music for OpenTTD (OpenMSX) |
