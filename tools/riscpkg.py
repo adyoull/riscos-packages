@@ -35,6 +35,8 @@ without Version) plus build fields starting "Build-":
       or <other.zip>::<file>, a zip in the same directory as the release zip
   Build-Meta: yes      a package with no files, that only depends on others
   Build-Notice: text put at the top of RiscPkg/Copyright (continued lines)
+  Build-Trigger: PostInstall triggers/<Pkg>/PostInstall  (optional; an
+      Obey file in this repository, put in RiscPkg/Triggers)
   Build-Untyped: ffd                                      (optional)
       gives files the release zip left without a RISC OS filetype that
       type (UnixLib ports read their data files whatever their type);
@@ -465,6 +467,21 @@ class _Key:
 
 def build(args):
     control, maps, copyright_files, notice, untyped, meta = read_spec(args.spec)
+    # Build-Trigger: <PostInstall|PostRemove|PreInstall|PreRemove> <Obey file,
+    # relative to the packaging repository> becomes RiscPkg/Triggers/<name>.
+    triggers = []
+    with open(args.spec, encoding="utf-8") as f:
+        spec_rec = parse_control(f.read(), args.spec)[0]
+    repo = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    for t in get_all(spec_rec, "Build-Trigger"):
+        words = t.split()
+        if len(words) != 2 or words[0] not in ("PostInstall", "PostRemove",
+                                               "PreInstall", "PreRemove"):
+            raise Fail("%s: Build-Trigger wants 'PostInstall triggers/<Pkg>/PostInstall'"
+                       % args.spec)
+        with open(os.path.join(repo, words[1]), "rb") as f:
+            body = f.read().replace(b"\r\n", b"\n")
+        triggers.append((words[0], body))
     typed_here = 0
     name = get(control, "Package")
     with zipfile.ZipFile(args.source) as src:
@@ -559,6 +576,13 @@ def build(args):
                     zi.extra = arc0_extra(0xFFF, stamp)
                     zi.compress_type = zipfile.ZIP_DEFLATED
                     z.writestr(zi, text.encode("latin-1"))
+                for tname, body in triggers:
+                    zi = zipfile.ZipInfo("RiscPkg/Triggers/" + tname, newest)
+                    zi.create_system = 3
+                    zi.external_attr = 0o100644 << 16
+                    zi.extra = arc0_extra(0xFEB, stamp)
+                    zi.compress_type = zipfile.ZIP_DEFLATED
+                    z.writestr(zi, body)
                 for info, dest in out_entries:
                     zi = Latin1Info(riscos_name(dest), info.date_time)
                     zi.create_system = info.create_system

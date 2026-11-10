@@ -1,0 +1,17 @@
+| GTKLibs: put the hard-float loader (ld-riscos/so/2) and SOManager 3.04
+| into the user's !SharedLibs. PackMan can't install them there itself:
+| !SharedLibs belongs to the SharedLibs package. Copy's N option copies
+| a file only if !SharedLibs hasn't got it or has an older one.
+Set PkgTrigger$ReturnCode 0
+If "<PkgTrigger$Abort>" = "1" Then Obey
+Unset GTKLibs$SL
+IfThere Boot:Resources.!SharedLibs.!Boot Then Set GTKLibs$SL Boot:Resources.!SharedLibs
+If "<SharedLibs$Dir>" <> "" Then Set GTKLibs$SL <SharedLibs$Dir>
+If "<GTKLibs$SL>" = "" Then Echo GTKLibs: no !SharedLibs in !Boot.Resources. Install SharedLibs with PackMan, then install GTKLibs again.
+If "<GTKLibs$SL>" = "" Then Obey
+Echo GTKLibs: adding ld-riscos/so/2 and SOManager 3.04 to <GTKLibs$SL>
+CDir <GTKLibs$SL>.lib
+Copy <PkgTrigger$Path1>.SharedLibs.lib.ld-riscos-eabihf/so <GTKLibs$SL>.lib.ld-riscos-eabihf/so ~C~DFN~S~V
+Copy <PkgTrigger$Path1>.SharedLibs.lib.ld-riscos/so/2 <GTKLibs$SL>.lib.ld-riscos/so/2 ~C~DFN~S~V
+Copy <PkgTrigger$Path1>.SharedLibs.SOManager <GTKLibs$SL>.SOManager ~C~DFN~S~V
+Unset GTKLibs$SL

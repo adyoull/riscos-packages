@@ -1,0 +1,37 @@
+# Spec for tools/riscpkg.py: GTKLibs, riscos-gtk's shared libraries.
+Package: GTKLibs
+Section: Library
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedLibs, SharedUnixLibrary (>= 1.16), ARMEABISupport
+Components: Resources.!GTKLibs (LookAt)
+Homepage: https://github.com/adyoull/riscos-gtk
+Description: GTK 3 for RISC OS: the shared libraries riscos-gtk programs use
+ GTK 3.24.52, riscos-gtk's RISC OS backend and the 24 libraries under it
+ (GLib, Cairo, Pango, HarfBuzz, FreeType and more), as shared libraries
+ in !Boot.Resources.!GTKLibs, so every riscos-gtk program shares one
+ copy. It also adds the hard-float loader (ld-riscos/so/2) and SOManager
+ 3.04 to !SharedLibs when it's installed, if !SharedLibs hasn't got them.
+ .
+ This is a public beta of the riscos-gtk ports.
+Build-Map: Resources/!GTKLibs -> Resources/!GTKLibs
+Build-Map: Resources/!SharedLibs -> Resources/!GTKLibs/SharedLibs
+Build-Trigger: PostInstall triggers/GTKLibs/PostInstall
+Build-Notice: GTKLibs, packaged for PackMan from the riscos-gtk release zip on
+ https://github.com/adyoull/riscos-gtk/releases
+ .
+ GTK, GLib, Pango, Cairo, HarfBuzz and the other libraries are under the
+ GNU LGPL 2.1 or later, or MIT-style licences; riscos-gtk's source and
+ SDK are on the release page.
+ .
+ !GTKLibs.SharedLibs holds GCCSDK's SOManager 3.04 ((c) GCCSDK
+ Developers) and hard-float dynamic loader, free software from
+ riscos.info. The loader derives from Linux's ld.so 1.9.9, Copyright
+ (c) 1994-1997 Eric Youngdale, Peter MacDonald, David Engel, Hongjiu Lu
+ and Mitch D'Souza, under a BSD-style licence.
+ .
+ The LGPL follows.
+Build-Copyright: Resources/!GTKLibs/LicenceLGPL
