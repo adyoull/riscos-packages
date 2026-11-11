@@ -27,7 +27,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | Gnumeric | 1.12.62.0.21-1 | Gnumeric spreadsheet (GTK 3) |
 | GOGImport | 1.0.0.1-1 | Gets Heroes III's files out of the GOG installer for VCMI |
 | Groove | 0.3.0.1-1 | Music studio: loops, drums, piano roll, recording |
-| GTKLibs | 3.24.52.0.18-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
+| GTKLibs | 3.24.52.0.20-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
 | L3afpad | 0.8.18.1.11.0.37-1 | L3afpad simple text editor (GTK 3) |
 | Lumen | 0.0.38.7.0.1-1 | Photo library and non-destructive photo editor |

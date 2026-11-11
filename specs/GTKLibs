@@ -13,12 +13,14 @@ Description: GTK 3 for RISC OS: the shared libraries riscos-gtk programs use
  GTK 3.24.52, riscos-gtk's RISC OS backend and the 24 libraries under it
  (GLib, Cairo, Pango, HarfBuzz, FreeType and more), as shared libraries
  in !Boot.Resources.!GTKLibs, so every riscos-gtk program shares one
- copy. It also adds the hard-float loader (ld-riscos/so/2) and SOManager
- 3.04 to !SharedLibs when it's installed, if !SharedLibs hasn't got them.
+ copy. It adds the hard-float loader (ld-riscos/so/2) and SOManager
+ 3.04 to !SharedLibs when it's installed and at each start-up, where
+ !SharedLibs hasn't got them (or has an older SOManager). It lifts
+ the 128 MB dynamic area clamp at start-up, so GTK programs and Iris
+ can share libraries; restart after installing.
  .
  This is a public beta of the riscos-gtk ports.
 Build-Map: Resources/!GTKLibs -> Resources/!GTKLibs
-Build-Map: Resources/!SharedLibs -> Resources/!GTKLibs/SharedLibs
 Build-Trigger: PostInstall triggers/GTKLibs/PostInstall
 Build-Notice: GTKLibs, packaged for PackMan from the riscos-gtk release zip on
  https://github.com/adyoull/riscos-gtk/releases
@@ -33,5 +35,6 @@ Build-Notice: GTKLibs, packaged for PackMan from the riscos-gtk release zip on
  (c) 1994-1997 Eric Youngdale, Peter MacDonald, David Engel, Hongjiu Lu
  and Mitch D'Souza, under a BSD-style licence.
  .
- The LGPL follows.
+ The LGPL and the loader's licence follow.
 Build-Copyright: Resources/!GTKLibs/LicenceLGPL
+Build-Copyright: Resources/!GTKLibs/SharedLibs/COPYRIGHT-ld
