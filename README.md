@@ -13,21 +13,21 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 
 | Package | Version | What it is |
 |---|---|---|
-| AbiWord | 3.0.8.0.7-1 | AbiWord word processor (GTK 3) |
+| AbiWord | 3.0.8.0.8-1 | AbiWord word processor (GTK 3) |
 | AddrSpace | 0.1.0.0.1-1 | Shows what is using RISC OS's logical address space |
 | ClawsMail | 4.4.0.0.28-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.24-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
-| Folio | 0.0.1.0.75-1 | Reader for PDF and ebook files, built on MuPDF |
+| Folio | 0.0.1.0.76-1 | Reader for PDF and ebook files, built on MuPDF |
 | FolioCJK | 1.0.0.1-1 | Chinese, Japanese and Korean font for Folio |
 | FolioOCR | 1.0.0.1-1 | Text recognition (OCR) for Folio, English |
 | FolioSpeech | 1.0.0.1-1 | Reading aloud for Folio (British English voice) |
 | Freeciv | 3.2.6.0.14-1 | Civilization-style turn-based strategy game (Freeciv 3.2.6) |
 | Geany | 2.1.0.16-1 | Geany programmer's editor (GTK 3) |
-| Gnumeric | 1.12.62.0.21-1 | Gnumeric spreadsheet (GTK 3) |
+| Gnumeric | 1.12.62.0.22-1 | Gnumeric spreadsheet (GTK 3) |
 | GOGImport | 1.0.0.1-1 | Gets Heroes III's files out of the GOG installer for VCMI |
 | Groove | 0.3.0.1-1 | Music studio: loops, drums, piano roll, recording |
-| GTKLibs | 3.24.52.0.20-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
+| GTKLibs | 3.24.52.0.21-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
 | L3afpad | 0.8.18.1.11.0.37-1 | L3afpad simple text editor (GTK 3) |
 | Lumen | 0.0.38.7.0.1-1 | Photo library and non-destructive photo editor |
