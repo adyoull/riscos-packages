@@ -1,0 +1,28 @@
+# Spec for tools/riscpkg.py: RISC3D, the 3D driver interface.
+Package: RISC3D
+Section: System
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32
+Components: Resources.!RISC3D (Movable)
+Homepage: https://github.com/adyoull/riscos-risc3d
+Description: RISC OS's 3D driver interface, so Mesa programs use the GPU
+ !RISC3D lets programs that draw with riscos-mesa (OpenGL, OpenGL ES)
+ use the machine's GPU: the RISC3D module, with GPU drivers for a
+ Raspberry Pi 4, 400 or CM4 (V3DRender) and RISC OS on Linux (Linux3D).
+ Each driver starts only on its own machine; elsewhere programs draw in
+ software as before. It goes in !Boot.Resources and loads at start-up.
+Build-Map: !RISC3D -> Resources/!RISC3D
+Build-Notice: RISC3D, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-risc3d/releases
+ .
+ RISC3D and Linux3D are Copyright (c) 2026 Andrew Youll, under the MIT
+ licence (at the end of !RISC3D.!Help). V3DRender is Copyright (c) 2026
+ Andrew Youll and others, under the GNU GPL version 2 or later; its
+ source is at https://github.com/adyoull/riscos-v3drender. The notices
+ follow.
+Build-Copyright: !RISC3D/!Help
+Build-Copyright: !RISC3D/GPU/Licences
+Build-Copyright: !RISC3D/GPU/GPL-2

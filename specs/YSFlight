@@ -6,13 +6,15 @@ Licence: Free
 Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32, vfpv3
-Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Depends: MesaLibs (>= 20.3.5.0.21), SharedUnixLibrary (>= 1.16), ARMEABISupport
+Recommends: RISC3D
 Components: Apps.Games.!YSFlight (Movable LookAt)
 Homepage: https://github.com/adyoull/riscos-ysflight
 Description: Free flight simulator (YSFlight Community Edition)
- Fly YSFlight's aircraft in a desktop window or full screen with
- software OpenGL, sound and USB joysticks. About 22 frames a second
- at 640x480 on a Pi 4. ARMv7 with VFP.
+ Fly YSFlight's aircraft in a desktop window or full screen, with sound
+ and USB joysticks. With RISC3D it draws on a Pi 4's GPU; otherwise in
+ software, about 22 frames a second at 640x480 on a Pi 4. Loads OpenGL
+ from MesaLibs. ARMv7 with VFP.
 Build-Map: !YSFlight -> Apps/Games/!YSFlight
 Build-Untyped: auto
 Build-Notice: YSFlight Community Edition, packaged for PackMan from the release zip on

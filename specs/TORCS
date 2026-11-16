@@ -6,14 +6,16 @@ Licence: Free
 Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32, vfpv3
-Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Depends: MesaLibs (>= 20.3.5.0.21), SharedUnixLibrary (>= 1.16), ARMEABISupport
+Recommends: RISC3D
 Components: Apps.Games.!TORCS (Movable LookAt)
 Homepage: https://github.com/adyoull/riscos-torcs
 Description: The Open Racing Car Simulator, a 3D racing game
- Software OpenGL racing (riscos-mesa) in a desktop window or full
- screen, with nine tracks and Debian's free cars. About 10 frames a
- second on a Pi 4; needs a fast ARMv7 machine with NEON and about
- 64 MB free.
+ OpenGL racing in a desktop window or full screen, with nine tracks and
+ Debian's free cars. With RISC3D it draws on a Pi 4's GPU (and under
+ RISC OS on Linux); otherwise in software, about 10 frames a second on a
+ Pi 4. Loads OpenGL, SDL 2 and OpenAL from MesaLibs. Needs a fast ARMv7
+ machine with NEON and about 64 MB free.
 Build-Map: !TORCS -> Apps/Games/!TORCS
 Build-Untyped: auto
 Build-Notice: TORCS, packaged for PackMan from the release zip on

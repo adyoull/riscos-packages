@@ -1,0 +1,17 @@
+| MesaLibs: put the hard-float loader (ld-riscos/so/2) and SOManager 3.04
+| into the user's !SharedLibs. PackMan can't install them there itself:
+| !SharedLibs belongs to the SharedLibs package. Copy's N option copies
+| a file only if !SharedLibs hasn't got it or has an older one.
+Set PkgTrigger$ReturnCode 0
+If "<PkgTrigger$Abort>" = "1" Then Obey
+Unset MesaLibs$SL
+IfThere Boot:Resources.!SharedLibs.!Boot Then Set MesaLibs$SL Boot:Resources.!SharedLibs
+If "<SharedLibs$Dir>" <> "" Then Set MesaLibs$SL <SharedLibs$Dir>
+If "<MesaLibs$SL>" = "" Then Echo MesaLibs: no !SharedLibs in !Boot.Resources. Install SharedLibs with PackMan, then install MesaLibs again.
+If "<MesaLibs$SL>" = "" Then Obey
+Echo MesaLibs: adding ld-riscos/so/2 and SOManager 3.04 to <MesaLibs$SL>
+CDir <MesaLibs$SL>.lib
+Copy <PkgTrigger$Path1>.SharedLibs.lib.ld-riscos-eabihf/so <MesaLibs$SL>.lib.ld-riscos-eabihf/so ~C~DFN~S~V
+Copy <PkgTrigger$Path1>.SharedLibs.lib.ld-riscos/so/2 <MesaLibs$SL>.lib.ld-riscos/so/2 ~C~DFN~S~V
+Copy <PkgTrigger$Path1>.SharedLibs.SOManager <MesaLibs$SL>.SOManager ~C~DFN~S~V
+Unset MesaLibs$SL

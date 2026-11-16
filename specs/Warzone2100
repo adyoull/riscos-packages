@@ -6,13 +6,16 @@ Licence: Free
 Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32, vfpv3
-Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Depends: MesaLibs (>= 20.3.5.0.21), SharedUnixLibrary (>= 1.16), ARMEABISupport
+Recommends: RISC3D
 Components: Apps.Games.!Warzone2100 (Movable LookAt)
 Homepage: https://github.com/adyoull/riscos-warzone2100
 Description: Real-time strategy game (Warzone 2100 2.3.9)
- 3D real-time strategy with software OpenGL, in a multitasking window
- or full screen, with hardware overlay on the Pi. Campaign, skirmish
- and the original music. ARMv7 with VFPv3.
+ 3D real-time strategy in a multitasking window or full screen, with
+ hardware overlay on the Pi. With RISC3D it draws on a Pi 4's GPU (and
+ under RISC OS on Linux); otherwise in software. Loads OpenGL, SDL 2 and
+ OpenAL from MesaLibs. Campaign, skirmish and the original music. ARMv7
+ with VFPv3.
 Build-Map: !Warzone2100 -> Apps/Games/!Warzone2100
 Build-Notice: Warzone 2100, packaged for PackMan from the release zip on
  https://github.com/adyoull/riscos-warzone2100/releases

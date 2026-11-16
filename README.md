@@ -35,6 +35,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | LumenLens | 1.0.0.1-1 | Lens profiles for Lumen's Lens Correction |
 | LumenRaw | 1.4.0.1-1 | Camera raw files in Lumen (LibRaw 0.22.3) |
 | Matinee | 0.1.1.0.1-1 | Plex, Jellyfin and DLNA media client with a built-in player |
+| MesaLibs | 20.3.5.0.21-1 | OpenGL, EGL, GLU, GLUT, SDL 2 and OpenAL as shared libraries |
 | mtPaint | 3.50.14.0.16-1 | mtPaint painting program (GTK 3) |
 | NetStats | 1.06.0.1-1 | Network statistics: traffic graphs, connections and LAN devices |
 | OpenTTD | 14.1.0.8-1 | Open-source transport simulation game (OpenTTD 14.1) |
@@ -47,8 +48,9 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | RDPServer | 0.2.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
 | Reel | 0.1.31.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
 | ReelEdit | 0.3~beta.3.0.1-1 | Non-linear video editor, built on MLT and FFmpeg |
+| RISC3D | 0.04.0.7-1 | RISC OS's 3D driver interface, so Mesa programs use the GPU |
 | SoftMIDI | 0.5.0.0.1-1 | General MIDI SoundFont and the *MIDIPlay player |
-| TORCS | 1.3.7.0.5-1 | The Open Racing Car Simulator, a 3D racing game |
+| TORCS | 1.3.7.0.6-1 | The Open Racing Car Simulator, a 3D racing game |
 | TORCS-Tracks | 1.3.7.0.3-1 | All 29 extra tracks for TORCS |
 | TORCS-Tracks-DirtOval | 1.3.7.0.3-1 | Dirt and oval tracks for TORCS |
 | TORCS-Tracks-Road1 | 1.3.7.0.3-1 | Road tracks for TORCS (E-Track 2, Ole Road 1, E-Track 6) |
@@ -57,8 +59,8 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | TTF-Noto-Color-Emoji | 2.051.0.1-1 | Noto Color Emoji font for fontconfig programs |
 | TubeSearch | 0.2.0~rc14.0.1-1 | Search and browse YouTube, and play videos in Reel |
 | VCMI | 1.7.5.0.2-1 | Open-source engine for Heroes of Might and Magic III |
-| Warzone2100 | 2.3.9.0.15-1 | Real-time strategy game (Warzone 2100 2.3.9) |
-| YSFlight | 0.0.1-1 | Free flight simulator (YSFlight Community Edition) |
+| Warzone2100 | 2.3.9.0.16-1 | Real-time strategy game (Warzone 2100 2.3.9) |
+| YSFlight | 0.0.2-1 | Free flight simulator (YSFlight Community Edition) |
 
 ## Version numbers
 

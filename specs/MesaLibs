@@ -1,0 +1,31 @@
+# Spec for tools/riscpkg.py: MesaLibs, riscos-mesa's shared libraries.
+Package: MesaLibs
+Section: Library
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: SharedLibs, SharedUnixLibrary (>= 1.16), ARMEABISupport
+Recommends: RISC3D
+Components: Resources.!MesaLibs (LookAt)
+Homepage: https://github.com/adyoull/riscos-mesa
+Description: OpenGL, EGL, GLU, GLUT, SDL 2 and OpenAL as shared libraries
+ riscos-mesa's shared libraries for "mixed" programs (such as TORCS and
+ YSFlight): OSMesa (OpenGL 2.1, OpenGL ES), EGL, GLU, freeglut, SDL 2,
+ OpenAL Soft and the GPU library for a Pi 4, in !Boot.Resources, so
+ programs share one copy. It adds the hard-float loader (ld-riscos/so/2)
+ and SOManager 3.04 to !SharedLibs where it hasn't got them. With RISC3D
+ installed programs draw on the GPU; without it, in software. Restart
+ after installing or upgrading it.
+Build-Map: !MesaLibs -> Resources/!MesaLibs
+Build-Trigger: PostInstall triggers/MesaLibs/PostInstall
+Build-Notice: MesaLibs, packaged for PackMan from riscos-mesa's release zip on
+ https://github.com/adyoull/riscos-mesa/releases
+ .
+ Mesa 20.3.5 and 26.1.6 (MIT), GLU (SGI Free Software Licence B 2.0),
+ freeglut (MIT/X), SDL (zlib) and OpenAL Soft (GNU LGPL 2 or later;
+ being a shared library, it can be replaced); SOManager and the
+ hard-float loader in !MesaLibs.SharedLibs are GCCSDK's (the loader
+ derives from Linux's ld.so 1.9.9, BSD-style). Licences follow.
+Build-Copyright: !MesaLibs/Licences
