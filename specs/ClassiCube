@@ -1,0 +1,27 @@
+# Spec for tools/riscpkg.py: ClassiCube.
+Package: ClassiCube
+Section: Games
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: MesaLibs (>= 20.3.5.0.21), SharedUnixLibrary (>= 1.16), ARMEABISupport
+Recommends: RISC3D
+Components: Apps.Games.!ClassiCube (Movable LookAt)
+Homepage: https://github.com/adyoull/riscos-classicube
+Description: Block-building game compatible with Minecraft Classic
+ ClassiCube 1.3.9: build and explore in single player, or join the
+ community's servers (through AcornSSL). Mouse look, and a keys window
+ at start-up. With RISC3D it draws on a Pi 4's GPU (and under RISC OS on
+ Linux); otherwise in software. Loads OpenGL, SDL 2 and OpenAL from
+ MesaLibs. The first time it runs it offers to download the game's
+ textures and sounds from classicube.net (about 20 MB). ARMv7.
+Build-Map: !ClassiCube -> Apps/Games/!ClassiCube
+Build-Notice: ClassiCube, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-classicube/releases
+ (only !ClassiCube: !MesaLibs comes from the MesaLibs package).
+ .
+ ClassiCube is open source; its licence follows, then PThreadTicker's.
+Build-Copyright: !ClassiCube/Licence
+Build-Copyright: !ClassiCube/PThreadTicker-Licence

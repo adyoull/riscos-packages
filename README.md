@@ -15,6 +15,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 |---|---|---|
 | AbiWord | 3.0.8.0.8-1 | AbiWord word processor (GTK 3) |
 | AddrSpace | 0.1.0.0.1-1 | Shows what is using RISC OS's logical address space |
+| ClassiCube | 1.3.9.0.1-1 | Block-building game compatible with Minecraft Classic |
 | ClawsMail | 4.4.0.0.28-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.24-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
