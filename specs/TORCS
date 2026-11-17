@@ -6,8 +6,7 @@ Licence: Free
 Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32, vfpv3
-Depends: MesaLibs (>= 20.3.5.0.21), SharedUnixLibrary (>= 1.16), ARMEABISupport
-Recommends: RISC3D
+Depends: MesaLibs (>= 20.3.5.0.21), SharedUnixLibrary (>= 1.16), ARMEABISupport, RISC3D
 Components: Apps.Games.!TORCS (Movable LookAt)
 Homepage: https://github.com/adyoull/riscos-torcs
 Description: The Open Racing Car Simulator, a 3D racing game

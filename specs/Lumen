@@ -19,7 +19,8 @@ Description: Photo library and non-destructive photo editor
  layers painted with a brush or set by a gradient or an oval, presets
  and styles; export to JPEG or PNG, and printing. Reads JPEG, PNG and
  TIFF; camera raw with LumenRaw, HEIF and AVIF with LumenHEIF, and lens
- profiles with LumenLens. Needs RISC OS 5.30 or later; built for the
+ profiles with LumenLens. Shows where photos were taken, on a map with
+ RiscOSM. Needs RISC OS 5.30 or later; built for the
  Pi 4.
 Build-Map: !Lumen -> Apps/Graphics/!Lumen
 Build-Notice: Lumen, packaged for PackMan from the release zip on

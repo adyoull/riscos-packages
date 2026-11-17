@@ -15,7 +15,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 |---|---|---|
 | AbiWord | 3.0.8.0.8-1 | AbiWord word processor (GTK 3) |
 | AddrSpace | 0.1.0.0.1-1 | Shows what is using RISC OS's logical address space |
-| ClassiCube | 1.3.9.0.1-1 | Block-building game compatible with Minecraft Classic |
+| ClassiCube | 1.3.9.0.2-2 | Block-building game compatible with Minecraft Classic |
 | ClawsMail | 4.4.0.0.28-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.24-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
@@ -31,12 +31,12 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | GTKLibs | 3.24.52.0.21-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
 | L3afpad | 0.8.18.1.11.0.37-1 | L3afpad simple text editor (GTK 3) |
-| Lumen | 0.0.38.7.0.1-1 | Photo library and non-destructive photo editor |
+| Lumen | 0.0.39.1.0.1-1 | Photo library and non-destructive photo editor |
 | LumenHEIF | 1.3.0.1-1 | HEIF and AVIF photos in Lumen |
 | LumenLens | 1.0.0.1-1 | Lens profiles for Lumen's Lens Correction |
 | LumenRaw | 1.4.0.1-1 | Camera raw files in Lumen (LibRaw 0.22.3) |
 | Matinee | 0.1.1.0.1-1 | Plex, Jellyfin and DLNA media client with a built-in player |
-| MesaLibs | 20.3.5.0.21-1 | OpenGL, EGL, GLU, GLUT, SDL 2 and OpenAL as shared libraries |
+| MesaLibs | 20.3.5.0.21-2 | OpenGL, EGL, GLU, GLUT, SDL 2 and OpenAL as shared libraries |
 | mtPaint | 3.50.14.0.16-1 | mtPaint painting program (GTK 3) |
 | NetStats | 1.06.0.1-1 | Network statistics: traffic graphs, connections and LAN devices |
 | OpenTTD | 14.1.0.8-1 | Open-source transport simulation game (OpenTTD 14.1) |
@@ -51,7 +51,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | ReelEdit | 0.3~beta.3.0.1-1 | Non-linear video editor, built on MLT and FFmpeg |
 | RISC3D | 0.04.0.7-1 | RISC OS's 3D driver interface, so Mesa programs use the GPU |
 | SoftMIDI | 0.5.0.0.1-1 | General MIDI SoundFont and the *MIDIPlay player |
-| TORCS | 1.3.7.0.6-1 | The Open Racing Car Simulator, a 3D racing game |
+| TORCS | 1.3.7.0.6-2 | The Open Racing Car Simulator, a 3D racing game |
 | TORCS-Tracks | 1.3.7.0.3-1 | All 29 extra tracks for TORCS |
 | TORCS-Tracks-DirtOval | 1.3.7.0.3-1 | Dirt and oval tracks for TORCS |
 | TORCS-Tracks-Road1 | 1.3.7.0.3-1 | Road tracks for TORCS (E-Track 2, Ole Road 1, E-Track 6) |
@@ -60,8 +60,8 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | TTF-Noto-Color-Emoji | 2.051.0.1-1 | Noto Color Emoji font for fontconfig programs |
 | TubeSearch | 0.2.0~rc14.0.1-1 | Search and browse YouTube, and play videos in Reel |
 | VCMI | 1.7.5.0.2-1 | Open-source engine for Heroes of Might and Magic III |
-| Warzone2100 | 2.3.9.0.16-1 | Real-time strategy game (Warzone 2100 2.3.9) |
-| YSFlight | 0.0.2-1 | Free flight simulator (YSFlight Community Edition) |
+| Warzone2100 | 2.3.9.0.16-2 | Real-time strategy game (Warzone 2100 2.3.9) |
+| YSFlight | 0.0.2-2 | Free flight simulator (YSFlight Community Edition) |
 
 ## Version numbers
 
