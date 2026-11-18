@@ -6,7 +6,7 @@ Licence: Free
 Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32, vfpv3
-Depends: SharedLibs, SharedUnixLibrary (>= 1.16), ARMEABISupport, RISC3D
+Depends: SharedLibs, SharedUnixLibrary (>= 1.16), ARMEABISupport, RISC3D (>= 0.05.0.1)
 Components: Resources.!MesaLibs (LookAt)
 Homepage: https://github.com/adyoull/riscos-mesa
 Description: OpenGL, EGL, GLU, GLUT, SDL 2 and OpenAL as shared libraries
