@@ -13,7 +13,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 
 | Package | Version | What it is |
 |---|---|---|
-| AbiWord | 3.0.8.0.8-1 | AbiWord word processor (GTK 3) |
+| AbiWord | 3.0.8.0.9-1 | AbiWord word processor (GTK 3) |
 | AddrSpace | 0.1.0.0.1-1 | Shows what is using RISC OS's logical address space |
 | ClassiCube | 1.3.9.0.2-2 | Block-building game compatible with Minecraft Classic |
 | ClawsMail | 4.4.0.0.28-1 | Claws Mail email client (GTK 3) |
@@ -28,7 +28,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | Gnumeric | 1.12.62.0.22-1 | Gnumeric spreadsheet (GTK 3) |
 | GOGImport | 1.0.0.1-1 | Gets Heroes III's files out of the GOG installer for VCMI |
 | Groove | 0.4.1.0.1-1 | Music studio: loops, drums, piano roll, recording |
-| GTKLibs | 3.24.52.0.22-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
+| GTKLibs | 3.24.52.0.24-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
 | L3afpad | 0.8.18.1.11.0.37-1 | L3afpad simple text editor (GTK 3) |
 | Lumen | 0.0.39.2.0.1-1 | Photo library and non-destructive photo editor |
