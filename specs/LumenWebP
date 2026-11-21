@@ -1,0 +1,24 @@
+# Spec for tools/riscpkg.py: the WebP plug-in for Lumen.
+Package: LumenWebP
+Section: Graphics
+Priority: Optional
+Licence: Free
+Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
+Standards-Version: 0.4.0
+Environment: arm32, vfpv3
+Depends: Lumen (>= 0.0.37)
+Homepage: https://github.com/adyoull/riscos-lumen
+Description: WebP pictures in Lumen
+ The LumenWebP plug-in lets Lumen open WebP pictures (.webp), lossy and
+ lossless, with or without transparency (laid on white); for an
+ animated WebP, the first frame. Built from libwebp 1.6.0, using NEON
+ where the processor has it. It goes into Lumen's Plugins directory,
+ with its own guide.
+Build-Map: !Lumen/Plugins/WebP -> Apps/Graphics/!Lumen/Plugins/WebP
+Build-Notice: LumenWebP, packaged for PackMan from the release zip on
+ https://github.com/adyoull/riscos-lumen/releases
+ .
+ LumenWebP's own code is under the MIT licence. libwebp 1.6.0 (BSD
+ 3-clause, Copyright (c) 2010 Google Inc., with Google's patent grant)
+ is built into it. The notices follow.
+Build-Copyright: !Lumen/Plugins/WebP/Licence

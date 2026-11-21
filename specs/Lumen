@@ -7,7 +7,7 @@ Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32, vfpv3
 Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
-Suggests: LumenRaw, LumenHEIF, LumenLens
+Suggests: LumenRaw, LumenHEIF, LumenLens, LumenWebP
 Components: Apps.Graphics.!Lumen (Movable LookAt)
 Homepage: https://github.com/adyoull/riscos-lumen
 Description: Photo library and non-destructive photo editor
@@ -20,7 +20,8 @@ Description: Photo library and non-destructive photo editor
  and styles; export to JPEG or PNG, and printing. Reads JPEG, PNG and
  TIFF; camera raw with LumenRaw, HEIF and AVIF with LumenHEIF, and lens
  profiles with LumenLens. Shows where photos were taken, on a map with
- RiscOSM. Needs RISC OS 5.30 or later; built for the
+ RiscOSM. Reads FITS astronomy pictures and stacks night-sky frames,
+ lined up by their stars; WebP with LumenWebP. Needs RISC OS 5.30 or later; built for the
  Pi 4.
 Build-Map: !Lumen -> Apps/Graphics/!Lumen
 Build-Notice: Lumen, packaged for PackMan from the release zip on
