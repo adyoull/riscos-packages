@@ -25,7 +25,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | FolioSpeech | 1.0.0.1-1 | Reading aloud for Folio (British English voice) |
 | Freeciv | 3.2.6.0.14-1 | Civilization-style turn-based strategy game (Freeciv 3.2.6) |
 | Geany | 2.1.0.16-1 | Geany programmer's editor (GTK 3) |
-| Gnumeric | 1.12.62.0.22-1 | Gnumeric spreadsheet (GTK 3) |
+| Gnumeric | 1.12.62.0.23-1 | Gnumeric spreadsheet (GTK 3) |
 | GOGImport | 1.0.0.1-1 | Gets Heroes III's files out of the GOG installer for VCMI |
 | Groove | 0.4.2.0.1-1 | Music studio: loops, drums, piano roll, recording |
 | GTKLibs | 3.24.52.0.24-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
@@ -38,7 +38,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | LumenWebP | 1.0.0.1-1 | WebP pictures in Lumen |
 | Matinee | 0.1.1.0.1-1 | Plex, Jellyfin and DLNA media client with a built-in player |
 | MesaLibs | 20.3.5.0.22-1 | OpenGL, EGL, GLU, GLUT, SDL 2 and OpenAL as shared libraries |
-| mtPaint | 3.50.14.0.16-1 | mtPaint painting program (GTK 3) |
+| mtPaint | 3.50.14.0.18-1 | mtPaint painting program (GTK 3) |
 | NetStats | 1.06.0.1-1 | Network statistics: traffic graphs, connections and LAN devices |
 | OpenTTD | 14.1.0.8-1 | Open-source transport simulation game (OpenTTD 14.1) |
 | OpenTTD-OpenMSX | 14.1.0.7-1 | Music for OpenTTD (OpenMSX) |
