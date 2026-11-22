@@ -6,20 +6,23 @@ Licence: Free
 Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32
-Components: Resources.!RISC3D (Movable)
+Recommends: MesaLibs (>= 20.3.5.0.23)
+Components: Resources.!RISC3D (Movable), Resources.Configure.!RISC3DSetup
 Homepage: https://github.com/adyoull/riscos-risc3d
 Description: RISC OS's 3D driver interface, so Mesa programs use the GPU
  !RISC3D lets programs that draw with riscos-mesa (OpenGL, OpenGL ES)
  use the machine's GPU: the RISC3D module, with GPU drivers for a
  Raspberry Pi 4, 400 or CM4 (V3DRender) and RISC OS on Linux (Linux3D).
  Each driver starts only on its own machine; elsewhere programs draw in
- software as before. It goes in !Boot.Resources and loads at start-up.
+ software as before. It goes in !Boot.Resources and loads at start-up;
+ Configure's "3D" window shows what draws and can turn the GPU off.
 Build-Map: !RISC3D -> Resources/!RISC3D
+Build-Map: !RISC3DSetup -> Resources/Configure/!RISC3DSetup
 Build-Notice: RISC3D, packaged for PackMan from the release zip on
  https://github.com/adyoull/riscos-risc3d/releases
  .
  RISC3D and Linux3D are Copyright (c) 2026 Andrew Youll, under the MIT
- licence (at the end of !RISC3D.!Help). V3DRender is Copyright (c) 2026
+ licence (at the end of !RISC3D.!Help), as is Configure's !RISC3DSetup. V3DRender is Copyright (c) 2026
  Andrew Youll and others, under the GNU GPL version 2 or later; its
  source is at https://github.com/adyoull/riscos-v3drender. The notices
  follow.
