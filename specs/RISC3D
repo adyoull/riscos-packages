@@ -6,6 +6,7 @@ Licence: Free
 Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32
+Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
 Recommends: MesaLibs (>= 20.3.5.0.23)
 Components: Resources.!RISC3D (Movable), Resources.Configure.!RISC3DSetup
 Homepage: https://github.com/adyoull/riscos-risc3d
