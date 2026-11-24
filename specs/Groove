@@ -27,6 +27,6 @@ Build-Notice: Groove, packaged for PackMan from the release zip on
  Groove is under the MIT licence. It links SoftMIDI's libmidisynth and
  TinySoundFont (MIT), stb_vorbis (MIT or public domain), the Bravura
  font (SIL Open Font Licence) and UnixLib (parts under the LGPL; the
- repository at tag v0.4.3 is the source to rebuild Groove with). The
+ repository at tag v0.4.4 is the source to rebuild Groove with). The
  notices follow.
 Build-Copyright: !Groove/Licences
