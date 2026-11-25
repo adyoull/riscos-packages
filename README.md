@@ -19,7 +19,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | ClawsMail | 4.4.0.0.28-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.24-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
-| Folio | 0.0.1.0.77-1 | Reader for PDF and ebook files, built on MuPDF |
+| Folio | 0.0.1.0.78-1 | Reader for PDF and ebook files, built on MuPDF |
 | FolioCJK | 1.0.0.1-1 | Chinese, Japanese and Korean font for Folio |
 | FolioOCR | 1.0.0.1-1 | Text recognition (OCR) for Folio, English |
 | FolioSpeech | 1.0.0.1-1 | Reading aloud for Folio (British English voice) |
@@ -31,7 +31,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | GTKLibs | 3.24.52.0.27-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
 | L3afpad | 0.8.18.1.11.0.37-1 | L3afpad simple text editor (GTK 3) |
-| Lumen | 0.0.40.0.1-1 | Photo library and non-destructive photo editor |
+| Lumen | 0.0.42.0.1-1 | Photo library and non-destructive photo editor |
 | LumenHEIF | 1.3.0.1-1 | HEIF and AVIF photos in Lumen |
 | LumenLens | 1.0.0.1-1 | Lens profiles for Lumen's Lens Correction |
 | LumenRaw | 1.5.0.1-1 | Camera raw files in Lumen (LibRaw 0.22.3) |
