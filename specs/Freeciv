@@ -6,12 +6,13 @@ Licence: Free
 Maintainer: Andrew Youll <adyoull@users.noreply.github.com>
 Standards-Version: 0.4.0
 Environment: arm32, vfpv3
-Depends: SharedUnixLibrary (>= 1.16), ARMEABISupport
+Depends: MesaLibs (>= 20.3.5.0.23), SharedUnixLibrary (>= 1.16), ARMEABISupport, RISC3D
 Components: Apps.Games.!Freeciv (Movable LookAt), Apps.Games.!CivServer (Movable LookAt)
 Homepage: https://github.com/adyoull/riscos-freeciv
 Description: Civilization-style turn-based strategy game (Freeciv 3.2.6)
  The SDL2 client and the server: play the computer on the desktop in a
- window or full window, or join a network game. About 80 MB free
+ window or full window, or join a network game. The client loads SDL 2
+ from MesaLibs. About 80 MB free
  memory needed.
  .
  This is a test build.

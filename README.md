@@ -13,46 +13,46 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 
 | Package | Version | What it is |
 |---|---|---|
-| AbiWord | 3.0.8.0.9-1 | AbiWord word processor (GTK 3) |
+| AbiWord | 3.0.8.0.11-1 | AbiWord word processor (GTK 3) |
 | AddrSpace | 0.1.0.0.1-1 | Shows what is using RISC OS's logical address space |
 | ClassiCube | 1.3.9.0.2-2 | Block-building game compatible with Minecraft Classic |
-| ClawsMail | 4.4.0.0.28-1 | Claws Mail email client (GTK 3) |
+| ClawsMail | 4.4.0.0.29-1 | Claws Mail email client (GTK 3) |
 | FFmpeg | 5.1.10.0.24-1 | FFmpeg 5.1 LTS (ffmpeg, ffprobe, ffplay) for ARMv7 NEON |
 | fheroes2 | 1.1.17.0.5-1 | Free re-creation of the Heroes of Might and Magic II engine |
-| Folio | 0.0.1.0.78-1 | Reader for PDF and ebook files, built on MuPDF |
+| Folio | 0.0.1.0.79-1 | Reader for PDF and ebook files, built on MuPDF |
 | FolioCJK | 1.0.0.1-1 | Chinese, Japanese and Korean font for Folio |
 | FolioOCR | 1.0.0.1-1 | Text recognition (OCR) for Folio, English |
 | FolioSpeech | 1.0.0.1-1 | Reading aloud for Folio (British English voice) |
-| Freeciv | 3.2.6.0.14-1 | Civilization-style turn-based strategy game (Freeciv 3.2.6) |
-| Geany | 2.1.0.16-1 | Geany programmer's editor (GTK 3) |
-| Gnumeric | 1.12.62.0.24-1 | Gnumeric spreadsheet (GTK 3) |
+| Freeciv | 3.2.6.0.15-1 | Civilization-style turn-based strategy game (Freeciv 3.2.6) |
+| Geany | 2.1.0.17-1 | Geany programmer's editor (GTK 3) |
+| Gnumeric | 1.12.62.0.26-1 | Gnumeric spreadsheet (GTK 3) |
 | GOGImport | 1.0.0.1-1 | Gets Heroes III's files out of the GOG installer for VCMI |
 | Groove | 0.4.4.0.1-1 | Music studio: loops, drums, piano roll, recording |
-| GTKLibs | 3.24.52.0.33-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
+| GTKLibs | 3.24.52.0.34-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
-| L3afpad | 0.8.18.1.11.0.37-1 | L3afpad simple text editor (GTK 3) |
-| Lumen | 0.0.42.0.1-1 | Photo library and non-destructive photo editor |
+| L3afpad | 0.8.18.1.11.0.38-1 | L3afpad simple text editor (GTK 3) |
+| Lumen | 0.0.43.0.1-1 | Photo library and non-destructive photo editor |
 | LumenHEIF | 1.3.0.1-1 | HEIF and AVIF photos in Lumen |
 | LumenLens | 1.0.0.1-1 | Lens profiles for Lumen's Lens Correction |
 | LumenRaw | 1.5.0.1-1 | Camera raw files in Lumen (LibRaw 0.22.3) |
 | LumenWebP | 1.0.0.1-1 | WebP pictures in Lumen |
 | Matinee | 0.1.1.0.1-1 | Plex, Jellyfin and DLNA media client with a built-in player |
-| MesaLibs | 20.3.5.0.23-1 | OpenGL, EGL, GLU, GLUT, SDL 2 and OpenAL as shared libraries |
-| mtPaint | 3.50.14.0.18-1 | mtPaint painting program (GTK 3) |
+| MesaLibs | 20.3.5.0.24-1 | OpenGL, EGL, GLU, GLUT, SDL 2 and OpenAL as shared libraries |
+| mtPaint | 3.50.14.0.19-1 | mtPaint painting program (GTK 3) |
 | NetStats | 1.06.0.1-1 | Network statistics: traffic graphs, connections and LAN devices |
 | OpenTTD | 14.1.0.8-1 | Open-source transport simulation game (OpenTTD 14.1) |
 | OpenTTD-OpenMSX | 14.1.0.7-1 | Music for OpenTTD (OpenMSX) |
 | OpenTTD-OpenSFX | 14.1.0.7-1 | Sound effects for OpenTTD (OpenSFX) |
 | PCSX | 26.0.2-1 | PlayStation emulator (PCSX ReARMed) |
 | PDFS | 0.16.3.0.1-1 | Phones, tablets and cameras (MTP) as discs |
-| PThreadTicker | 0.03.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
+| PThreadTicker | 0.04.0.1-1 | Keeps threaded UnixLib programs safe in the desktop |
 | RDPClient | 0.93.4.0.1-1 | Remote Desktop (RDP) client, a port of rdesktop 1.6.0 |
 | RDPServer | 0.2.0.1-1 | Remote Desktop (RDP) server for the RISC OS desktop |
 | Reel | 0.1.31.0.1-1 | Video player for the RISC OS desktop, built on FFmpeg |
 | ReelEdit | 0.3~beta.3.0.1-1 | Non-linear video editor, built on MLT and FFmpeg |
-| RISC3D | 0.11.0.2-1 | RISC OS's 3D driver interface, so Mesa programs use the GPU |
+| RISC3D | 0.11.0.5-1 | RISC OS's 3D driver interface, so Mesa programs use the GPU |
 | SoftMIDI | 0.5.0.0.1-1 | General MIDI SoundFont and the *MIDIPlay player |
-| TORCS | 1.3.7.0.6-2 | The Open Racing Car Simulator, a 3D racing game |
+| TORCS | 1.3.7.0.7-1 | The Open Racing Car Simulator, a 3D racing game |
 | TORCS-Tracks | 1.3.7.0.3-1 | All 29 extra tracks for TORCS |
 | TORCS-Tracks-DirtOval | 1.3.7.0.3-1 | Dirt and oval tracks for TORCS |
 | TORCS-Tracks-Road1 | 1.3.7.0.3-1 | Road tracks for TORCS (E-Track 2, Ole Road 1, E-Track 6) |
@@ -61,7 +61,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | TTF-Noto-Color-Emoji | 2.051.0.1-1 | Noto Color Emoji font for fontconfig programs |
 | TubeSearch | 0.2.0~rc15.0.1-1 | Search and browse YouTube, and play videos in Reel |
 | VCMI | 1.7.5.0.2-1 | Open-source engine for Heroes of Might and Magic III |
-| Warzone2100 | 2.3.9.0.16-2 | Real-time strategy game (Warzone 2100 2.3.9) |
+| Warzone2100 | 2.3.9.0.17-1 | Real-time strategy game (Warzone 2100 2.3.9) |
 | YSFlight | 0.0.2-2 | Free flight simulator (YSFlight Community Edition) |
 
 ## Version numbers
