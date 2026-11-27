@@ -40,7 +40,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | MesaLibs | 20.3.5.0.24-1 | OpenGL, EGL, GLU, GLUT, SDL 2 and OpenAL as shared libraries |
 | mtPaint | 3.50.14.0.19-1 | mtPaint painting program (GTK 3) |
 | NetStats | 1.06.0.1-1 | Network statistics: traffic graphs, connections and LAN devices |
-| OpenTTD | 14.1.0.8-1 | Open-source transport simulation game (OpenTTD 14.1) |
+| OpenTTD | 15.3.0.1-1 | Open-source transport simulation game (OpenTTD 15.3) |
 | OpenTTD-OpenMSX | 14.1.0.7-1 | Music for OpenTTD (OpenMSX) |
 | OpenTTD-OpenSFX | 14.1.0.7-1 | Sound effects for OpenTTD (OpenSFX) |
 | PCSX | 26.0.2-1 | PlayStation emulator (PCSX ReARMed) |
