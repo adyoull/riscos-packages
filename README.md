@@ -31,7 +31,7 @@ the others. The list is also on <https://adyoull.github.io/riscos-packages/>.
 | GTKLibs | 3.24.52.0.34-1 | GTK 3 for RISC OS: the shared libraries riscos-gtk programs use |
 | Julius | 1.8.0.0.1-1 | Open-source engine for Caesar III, the Roman city-building game |
 | L3afpad | 0.8.18.1.11.0.38-1 | L3afpad simple text editor (GTK 3) |
-| Lumen | 0.0.43.0.1-1 | Photo library and non-destructive photo editor |
+| Lumen | 0.0.44.0.1-1 | Photo library and non-destructive photo editor |
 | LumenHEIF | 1.3.0.1-1 | HEIF and AVIF photos in Lumen |
 | LumenLens | 1.0.0.1-1 | Lens profiles for Lumen's Lens Correction |
 | LumenRaw | 1.5.0.1-1 | Camera raw files in Lumen (LibRaw 0.22.3) |
